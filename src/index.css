@@ -8,7 +8,7 @@ body {
     font-family: "Quicksand", sans-serif;
     font-size: 1rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: normal;
     overflow-x: hidden;
 }
@@ -41,7 +41,7 @@ body {
     background: none;
     border: none;
     font-family: "Quicksand", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -196,18 +196,70 @@ body {
 .portfolio-content-section {
     display: flex;
     justify-content: center;
+    padding-left: 15rem;
+    padding-right: 15rem;
 }
 
 .portfolio-projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    row-gap: 150px;
 }
 
 .portfolio-project-photo {
     grid-column: 1;
-    background-image: url('/public/theme/images/mockup-trading.svg');
     background-size: cover;
     background-position: center;
     width: 27.4rem;
     height: 18rem;
+}
+
+.portfolio-project-text {
+    grid-column: 2;
+    font-family: "Quicksand", sans-serif;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 600;
+}
+
+.project-name {
+    color: #000;
+    font-size: 2rem;
+    margin-top: 19px;
+    margin-bottom: 4px;
+}
+
+.project-subtitle {
+    color: #C348B0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.project-description {
+    color: #000;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.see-more-button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+    color: #000;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.042px;
+}
+
+.see-more-button.active, .see-more-button:hover {
+    background: var(--Linear, linear-gradient(90deg, #2036FF 0%, #C348B0 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
