@@ -1,10 +1,17 @@
 import React from "react";
-import {TradingApp} from "./svg-projects/TradingApp";
+import {NavHeader} from "./NavHeader";
+import {WelcomeSection} from "./WelcomeSection";
+import {BackgroundOrnaments} from "./BackgroundOrnaments";
+import {PortfolioSection} from "./PortfolioSection";
 
 export const Main = () => {
+
     return (
-        <>
-            <TradingApp/>
-        </>
+        <main className={'main-background'}>
+            <BackgroundOrnaments />
+            <NavHeader />
+            <WelcomeSection />
+            <PortfolioSection/>
+        </main>
     );
 }
