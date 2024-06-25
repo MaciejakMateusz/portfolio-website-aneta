@@ -5,8 +5,8 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: Quicksand;
-    font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -57,38 +57,33 @@ body {
     height: fit-content;
 }
 
-.ellipse-ornament-a {
-    width: 211px;
-    height: 211px;
+.ellipse-ornament {
     border-radius: 100%;
     flex-shrink: 0;
-    background-color: #132099;
     filter: blur(200px);
-    position: absolute;
+    position: fixed;
+}
+
+.ellipse-ornament.a {
+    width: 211px;
+    height: 211px;
+    background-color: rgb(19, 32, 153);
     top: -15px;
     left: -20px;
 }
 
-.ellipse-ornament-b {
+.ellipse-ornament.b {
     width: 517px;
     height: 517px;
-    flex-shrink: 0;
-    border-radius: 100%;
     background: rgba(19, 32, 153, 0.60);
-    filter: blur(200px);
-    position: absolute;
     top: -240px;
     left: -500px;
 }
 
-.ellipse-ornament-c {
+.ellipse-ornament.c {
     width: 414px;
     height: 414px;
-    flex-shrink: 0;
-    border-radius: 100%;
-    background: #C348B0;
-    filter: blur(200px);
-    position: absolute;
+    background: rgb(195, 72, 176);
     top: 541px;
     right: -250px;
 }
@@ -96,11 +91,7 @@ body {
 .ellipse-ornament-d {
     width: 288px;
     height: 288px;
-    flex-shrink: 0;
-    border-radius: 288px;
     background: rgba(19, 32, 153, 0.60);
-    filter: blur(200px);
-    position: absolute;
     top: 483px;
     right: -250px;
 }
@@ -120,7 +111,7 @@ body {
     grid-template-rows: max-content max-content max-content;
     justify-content: center;
     align-items: center;
-    width: 44.5rem;
+    width: 43rem;
     padding-top: 12rem;
 }
 
@@ -161,11 +152,12 @@ body {
     padding-top: 6px;
 }
 
-.portfolio-section {
+.portfolio-header-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 174px;
+    margin-top: 10.9rem;
+    margin-bottom: 7.5rem;
 }
 
 .portfolio-header {
@@ -189,7 +181,7 @@ body {
     align-items: center;
     justify-content: center;
     transform: translateY(0);
-    animation: moveUpDown 1s ease-in-out infinite alternate;
+    animation: moveUpDown 0.6s ease-in-out infinite alternate;
 }
 
 @keyframes moveUpDown {
@@ -199,4 +191,23 @@ body {
     100% {
         transform: translateY(15px);
     }
+}
+
+.portfolio-content-section {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.portfolio-project-photo {
+    grid-column: 1;
+    background-image: url('/public/theme/images/mockup-trading.svg');
+    background-size: cover;
+    background-position: center;
+    width: 27.4rem;
+    height: 18rem;
 }

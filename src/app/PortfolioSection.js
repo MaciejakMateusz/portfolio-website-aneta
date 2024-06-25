@@ -1,17 +1,23 @@
 import React from "react";
-import {useTranslation} from "react-i18next";
-import {DownAnimIcon} from "./icons/DownAnimIcon";
+import {PortfolioHeader} from "./PortfolioHeader";
 
 export const PortfolioSection = () => {
-    const {t} = useTranslation();
     return (
-        <section className={'portfolio-section'}>
-            <div className={'portfolio-header'}>
-                <span className={'portfolio-span'}>Portfolio</span>
-                <div className={'down-anim-icon'}>
-                    <DownAnimIcon />
+        <>
+            <section className={'portfolio-header-section'}>
+                <PortfolioHeader/>
+            </section>
+            <section className={'portfolio-content-section'}>
+                <div className={'portfolio-projects-grid'}>
+                    <div className={'portfolio-project-photo'}>
+
+                    </div>
+                    <div className={'portfolio-project-text'}>
+
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
+
 }
