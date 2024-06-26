@@ -1,7 +1,11 @@
 import React from "react";
 import {PortfolioHeader} from "./PortfolioHeader";
+import {Project} from "./Project";
+import {useTranslation} from "react-i18next";
 
 export const PortfolioSection = () => {
+    const {t} = useTranslation();
+
     return (
         <>
             <section className={'portfolio-header-section'}>
@@ -9,58 +13,26 @@ export const PortfolioSection = () => {
             </section>
             <section className={'portfolio-content-section'}>
                 <div className={'portfolio-projects-grid'}>
-                    <div className={'portfolio-project-photo'}
-                         style={{backgroundImage: `url(${process.env.PUBLIC_URL}/theme/images/mockup-trading.svg)`}}/>
-                    <div className={'portfolio-project-text'}>
-                        <p className={'project-name'}>Trading App</p>
-                        <p className={'project-subtitle'}>Interaktywna giełda w Twojej kieszeni</p>
-                        <p className={'project-description'}>
-                            Zaprojektowana w widokach landscape i portrait, aplikacja umożliwia intuicyjne dodawanie,
-                            edycję i modyfikację linii trendu. Dzięki nowoczesnemu designowi i zaawansowanym funkcjom
-                            korzystanie z platformy staje się wyjątkowo proste i przyjemne, zapewniając najwyższy poziom
-                            funkcjonalności.
-                        </p>
-                        <button className={'see-more-button'}>Zobacz więcej ></button>
-                    </div>
-                    <div className={'portfolio-project-photo'}
-                         style={{backgroundImage: `url(${process.env.PUBLIC_URL}/theme/images/mockup-active.svg)`}}/>
-                    <div className={'portfolio-project-text'}>
-                        <p className={'project-name'}>Trading App</p>
-                        <p className={'project-subtitle'}>Interaktywna giełda w Twojej kieszeni</p>
-                        <p className={'project-description'}>
-                            Zaprojektowana w widokach landscape i portrait, aplikacja umożliwia intuicyjne dodawanie,
-                            edycję i modyfikację linii trendu. Dzięki nowoczesnemu designowi i zaawansowanym funkcjom
-                            korzystanie z platformy staje się wyjątkowo proste i przyjemne, zapewniając najwyższy poziom
-                            funkcjonalności.
-                        </p>
-                        <button className={'see-more-button'}>Zobacz więcej ></button>
-                    </div>
-                    <div className={'portfolio-project-photo'}
-                         style={{backgroundImage: `url(${process.env.PUBLIC_URL}/theme/images/mockup-find-trip.svg)`}}/>
-                    <div className={'portfolio-project-text'}>
-                        <p className={'project-name'}>Trading App</p>
-                        <p className={'project-subtitle'}>Interaktywna giełda w Twojej kieszeni</p>
-                        <p className={'project-description'}>
-                            Zaprojektowana w widokach landscape i portrait, aplikacja umożliwia intuicyjne dodawanie,
-                            edycję i modyfikację linii trendu. Dzięki nowoczesnemu designowi i zaawansowanym funkcjom
-                            korzystanie z platformy staje się wyjątkowo proste i przyjemne, zapewniając najwyższy poziom
-                            funkcjonalności.
-                        </p>
-                        <button className={'see-more-button'}>Zobacz więcej ></button>
-                    </div>
-                    <div className={'portfolio-project-photo'}
-                         style={{backgroundImage: `url(${process.env.PUBLIC_URL}/theme/images/mockup-blood-donations.svg)`}}/>
-                    <div className={'portfolio-project-text'}>
-                        <p className={'project-name'}>Trading App</p>
-                        <p className={'project-subtitle'}>Interaktywna giełda w Twojej kieszeni</p>
-                        <p className={'project-description'}>
-                            Zaprojektowana w widokach landscape i portrait, aplikacja umożliwia intuicyjne dodawanie,
-                            edycję i modyfikację linii trendu. Dzięki nowoczesnemu designowi i zaawansowanym funkcjom
-                            korzystanie z platformy staje się wyjątkowo proste i przyjemne, zapewniając najwyższy poziom
-                            funkcjonalności.
-                        </p>
-                        <button className={'see-more-button'}>Zobacz więcej ></button>
-                    </div>
+                    <Project imageName={'mockup-trading.svg'}
+                             name={'Trading App'}
+                             subtitle={t('tradingAppSubtitle')}
+                             description={t('tradingAppDescription')}
+                             path={"/trading-app"}/>
+                    <Project imageName={'mockup-active.svg'}
+                             name={t('projectActiveName')}
+                             subtitle={t('projectActiveSubtitle')}
+                             description={t('projectActiveDescription')}
+                             path={"/project-active"}/>
+                    <Project imageName={'mockup-find-trip.svg'}
+                             name={'Find My Trip'}
+                             subtitle={t('findTripSubtitle')}
+                             description={t('findTripDescription')}
+                             path={"/find-my-trip"}/>
+                    <Project imageName={'mockup-blood-donations.svg'}
+                             name={t('bloodDonationName')}
+                             subtitle={t('bloodDonationSubtitle')}
+                             description={t('bloodDonationDescription')}
+                             path={"/blood-donations"}/>
                 </div>
             </section>
         </>
