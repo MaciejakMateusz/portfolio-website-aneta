@@ -1,7 +1,14 @@
 import React from "react";
+import {Helmet} from "react-helmet";
 
 export const TradingApp = () => {
     return (
-        <img className="project-svg" src={process.env.PUBLIC_URL +'/theme/svg-projects/trading-app.svg'} alt={'TradingApp'}/>
+        <>
+            <Helmet>
+                <title>Trading App</title>
+            </Helmet>
+            <img className="project-svg" src={process.env.PUBLIC_URL + '/theme/svg-projects/trading-app.svg'}
+                 alt={'Trading App'}/>
+        </>
     );
 }

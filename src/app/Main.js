@@ -3,15 +3,22 @@ import {NavHeader} from "./NavHeader";
 import {WelcomeSection} from "./WelcomeSection";
 import {BackgroundOrnaments} from "./BackgroundOrnaments";
 import {PortfolioSection} from "./PortfolioSection";
+import {Helmet} from "react-helmet";
 
 export const Main = () => {
 
     return (
-        <main className={'main-background'}>
-            <BackgroundOrnaments />
-            <NavHeader />
-            <WelcomeSection />
-            <PortfolioSection/>
-        </main>
+        <>
+            <Helmet>
+                <title>Portfolio</title>
+            </Helmet>
+            <main className={'main-background'}>
+                <BackgroundOrnaments/>
+                <NavHeader/>
+                <WelcomeSection/>
+                <PortfolioSection/>
+            </main>
+        </>
+
     );
 }

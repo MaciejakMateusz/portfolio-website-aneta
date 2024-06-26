@@ -1,17 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import {useTranslation} from "react-i18next";
-import {Navigate} from "react-router-dom";
+import {RightBlackArrowIcon} from "./icons/RightBlackArrowIcon";
+import {RightColorArrowIcon} from "./icons/RightColorArrowIcon";
 
-export const SeeMoreBtn = ({path}) => {
-    const {t} = useTranslation()
+export const SeeMoreBtn = ({url}) => {
+    const {t} = useTranslation();
+    const [isColoredIcon, setIsColoredIcon] = useState(false);
 
     const openNewTab = () => {
-        return <Navigate to={path} />
+        window.open(url, '_blank');
     }
 
     return (
-        <>
-            <button className={'see-more-button'} onClick={() => openNewTab()}>{t('seeMore')}</button>
-        </>
+        <button className={'see-more-button'}
+                onClick={() => openNewTab()}
+                onMouseOver={() => setIsColoredIcon(true)}
+                onMouseLeave={() => setIsColoredIcon(false)}>
+            {t('seeMore')}
+            <div className={'arrow-icon-wrapper'}>
+                {isColoredIcon ? <RightColorArrowIcon/> : <RightBlackArrowIcon/>}
+            </div>
+        </button>
     );
 }

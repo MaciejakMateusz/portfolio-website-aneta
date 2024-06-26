@@ -19,7 +19,7 @@ body {
 
 .nav-header {
     width: 100vw;
-    height: 80px;
+    height: 50px;
     margin-right: 40px;
     display: flex;
     align-items: end;
@@ -243,6 +243,11 @@ body {
     margin-bottom: 30px;
 }
 
+.see-more-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .see-more-button {
     cursor: pointer;
     background: none;
@@ -255,6 +260,8 @@ body {
     font-weight: 600;
     line-height: normal;
     letter-spacing: 0.042px;
+    display: flex;
+    align-items: center;
 }
 
 .see-more-button.active, .see-more-button:hover {
@@ -262,4 +269,13 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.arrow-icon-wrapper {
+    margin-top: 5px;
+    transition: transform 0.3s ease;
+}
+
+.see-more-button:hover .arrow-icon-wrapper {
+    transform: translateX(15px); /* Move the arrow 15px to the right on hover */
 }

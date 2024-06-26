@@ -1,12 +1,12 @@
 import React from "react";
-import {DownAnimIcon} from "./icons/DownAnimIcon";
+import {DownArrowIcon} from "./icons/DownArrowIcon";
 
 export const PortfolioHeader = () => {
     return (
         <div className={'portfolio-header'}>
             <span className={'portfolio-span'}>Portfolio</span>
             <div className={'down-anim-icon'}>
-                <DownAnimIcon/>
+                <DownArrowIcon/>
             </div>
         </div>
     );

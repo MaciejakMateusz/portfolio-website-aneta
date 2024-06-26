@@ -1,7 +1,7 @@
 import React from "react";
 import {SeeMoreBtn} from "./SeeMoreBtn";
 
-export const Project = ({imageName, name, subtitle, description, path}) => {
+export const Project = ({imageName, name, subtitle, description, url}) => {
     return (
         <>
             <div className={'portfolio-project-photo'}
@@ -10,7 +10,7 @@ export const Project = ({imageName, name, subtitle, description, path}) => {
                 <p className={'project-name'}>{name}</p>
                 <p className={'project-subtitle'}>{subtitle}</p>
                 <p className={'project-description'}>{description}</p>
-                <SeeMoreBtn path={path}/>
+                <SeeMoreBtn url={url}/>
             </div>
         </>
     );

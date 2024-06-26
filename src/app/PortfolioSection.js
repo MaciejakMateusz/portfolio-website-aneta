@@ -17,22 +17,22 @@ export const PortfolioSection = () => {
                              name={'Trading App'}
                              subtitle={t('tradingAppSubtitle')}
                              description={t('tradingAppDescription')}
-                             path={"/trading-app"}/>
+                             url={"/trading-app"}/>
                     <Project imageName={'mockup-active.svg'}
                              name={t('projectActiveName')}
                              subtitle={t('projectActiveSubtitle')}
                              description={t('projectActiveDescription')}
-                             path={"/project-active"}/>
+                             url={"/project-active"}/>
                     <Project imageName={'mockup-find-trip.svg'}
-                             name={'Find My Trip'}
+                             name={'Trip Finder'}
                              subtitle={t('findTripSubtitle')}
                              description={t('findTripDescription')}
-                             path={"/find-my-trip"}/>
+                             url={"/trip-finder"}/>
                     <Project imageName={'mockup-blood-donations.svg'}
                              name={t('bloodDonationName')}
                              subtitle={t('bloodDonationSubtitle')}
                              description={t('bloodDonationDescription')}
-                             path={"/blood-donations"}/>
+                             url={"/blood-donation"}/>
                 </div>
             </section>
         </>
