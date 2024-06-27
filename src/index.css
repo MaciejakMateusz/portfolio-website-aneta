@@ -34,20 +34,45 @@ a {
     background: rgb(255, 255, 255, 0%);
 }
 
-.nav-buttons-wrapper {
-    margin-right: 80px;
-    margin-bottom: 15px;
+.nav-buttons-grid {
+    margin-bottom: 6px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 3rem;
+    margin-right: 2.5rem;
 }
 
 .nav-btn {
     cursor: pointer;
     padding: 0;
-    margin-left: 40px;
     background: none;
     border: none;
     font-family: "Quicksand", sans-serif;
     font-weight: 500;
     font-style: normal;
+    font-size: 1rem;
+    position: relative;
+    justify-self: center;
+}
+
+.nav-btn.home {
+    grid-column: 1;
+}
+
+.nav-btn.portfolio {
+    grid-column: 2;
+}
+
+.nav-btn.experience {
+    grid-column: 3;
+}
+
+nav-btn.contact {
+    grid-column: 4;
+}
+
+.nav-icon {
+    position: absolute;
 }
 
 .nav-btn.active, .nav-btn:hover {
@@ -308,7 +333,7 @@ a {
     font-style: normal;
     line-height: normal;
     display: grid;
-    padding-bottom: 9.6rem;
+    padding-bottom: 7rem;
 }
 
 .experience-p {
@@ -373,7 +398,7 @@ a {
     font-family: "Quicksand", sans-serif;
     font-style: normal;
     line-height: normal;
-    padding-bottom: 22.8rem;
+    padding-bottom: 10rem;
 }
 
 .contact-p {
@@ -433,6 +458,8 @@ a {
     font-size: 1rem;
     font-weight: 600;
     justify-self: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 footer {
@@ -440,7 +467,7 @@ footer {
     bottom: 0;
     color: #757575;
     font-family: "Quicksand", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -474,6 +501,7 @@ footer {
     }
 
     .self-description {
+        font-size: 1rem;
         padding-left: 3.5rem;
         padding-right: 3.5rem;
     }
@@ -499,6 +527,18 @@ footer {
 }
 
 @media (max-width: 700px) {
+    .nav-text {
+        display: none;
+    }
+
+    .nav-icon {
+        position: relative;
+    }
+
+    .nav-buttons-grid {
+        column-gap: 1rem;
+    }
+
     .contact-buttons-grid {
         grid-template-columns: 1fr;
     }
