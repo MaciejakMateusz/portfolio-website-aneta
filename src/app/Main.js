@@ -5,6 +5,7 @@ import {BackgroundOrnaments} from "./BackgroundOrnaments";
 import {PortfolioSection} from "./PortfolioSection";
 import {Helmet} from "react-helmet";
 import {ExperienceSection} from "./ExperienceSection";
+import {ContactSection} from "./ContactSection";
 
 export const Main = () => {
 
@@ -19,6 +20,8 @@ export const Main = () => {
                 <WelcomeSection/>
                 <PortfolioSection/>
                 <ExperienceSection/>
+                <ContactSection/>
+                <footer>&copy; by Aneta Wolańczyk</footer>
             </main>
         </>
     );

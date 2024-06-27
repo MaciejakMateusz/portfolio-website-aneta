@@ -15,6 +15,10 @@ body, html {
     max-width: 100%;
 }
 
+a {
+    all: unset;
+}
+
 .project-svg {
     width: 100%;
 }
@@ -296,6 +300,7 @@ body, html {
 
 .experience-section {
     margin-top: 15rem;
+    margin-bottom: 10rem;
     width: 100%;
     height: 39.5rem;
     background: rgba(78, 85, 201, 0.05);
@@ -303,6 +308,7 @@ body, html {
     font-style: normal;
     line-height: normal;
     display: grid;
+    padding-bottom: 9.6rem;
 }
 
 .experience-p {
@@ -360,6 +366,91 @@ body, html {
     padding-right: 1.5rem;
 }
 
+.contact-section {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: "Quicksand", sans-serif;
+    font-style: normal;
+    line-height: normal;
+    padding-bottom: 22.8rem;
+}
+
+.contact-p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #2036FF 0%, #C348B0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
+
+.contact-msg-p {
+    color: #000;
+    text-align: center;
+    justify-self: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    max-width: 40.3rem;
+}
+
+.contact-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4vw;
+    margin-top: 1rem;
+}
+
+.contact-button-frame {
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.contact-button-frame.phone {
+    grid-column: 1;
+}
+
+.contact-button-frame.email {
+    grid-column: 2;
+}
+
+.contact-button-frame.linkedin {
+    grid-column: 3;
+}
+
+.contact-icon {
+    padding: 5px;
+    justify-self: center;
+}
+
+.contact-icon-text {
+    padding-top: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    justify-self: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: #757575;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 @media (max-width: 1000px) {
     .portfolio-projects-grid {
         row-gap: 80px;
@@ -404,5 +495,27 @@ body, html {
 
     .junior-span {
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .contact-buttons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-button-frame {
+        margin-top: 2rem;
+    }
+
+    .contact-button-frame.phone {
+        grid-column: 1;
+    }
+
+    .contact-button-frame.email {
+        grid-column: 1;
+    }
+
+    .contact-button-frame.linkedin {
+        grid-column: 1;
     }
 }
