@@ -9,16 +9,15 @@ export const Main = () => {
 
     return (
         <>
+            <BackgroundOrnaments/>
             <Helmet>
                 <title>Portfolio</title>
             </Helmet>
             <main className={'main-background'}>
-                <BackgroundOrnaments/>
                 <NavHeader/>
                 <WelcomeSection/>
                 <PortfolioSection/>
             </main>
         </>
-
     );
 }
