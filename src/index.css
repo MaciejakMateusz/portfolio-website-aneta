@@ -302,6 +302,7 @@ body, html {
     font-family: "Quicksand", sans-serif;
     font-style: normal;
     line-height: normal;
+    display: grid;
 }
 
 .experience-p {
@@ -313,14 +314,18 @@ body, html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .experience-description {
-    padding: 0 21rem 3rem;
     text-align: center;
+    justify-self: center;
     color: #000;
     font-size: 1.4rem;
     font-weight: 500;
+    max-width: 56rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .experience-brands-grid {
@@ -330,20 +335,29 @@ body, html {
 }
 
 .experience-brand {
-    max-width: 250px;
-    height: auto;
+    background-size: cover;
+    background-position: center;
+    max-width: 16rem;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.experience-brand.a {
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.brand-wrapper.a {
     grid-column: 1;
-    justify-self: flex-end;
-    object-fit: contain;
+    justify-content: flex-end;
+    padding-left: 1.5rem;
 }
 
-.experience-brand.b {
+.brand-wrapper.b {
     grid-column: 2;
-    justify-self: flex-start;
-    object-fit: contain;
+    justify-content: flex-start;
+    padding-right: 1.5rem;
 }
 
 @media (max-width: 1000px) {
@@ -371,6 +385,10 @@ body, html {
     .self-description {
         padding-left: 3.5rem;
         padding-right: 3.5rem;
+    }
+
+    .experience-brands-grid {
+        column-gap: 2.3rem !important;
     }
 }
 

@@ -57,7 +57,14 @@ export const NavHeader = () => {
                     </Link>
                 </button>
                 <button className={'nav-btn'}>
-                    <span>{t('contact')}</span>
+                    <Link activeClass="active"
+                          to="contact"
+                          spy={true}
+                          smooth={true}
+                          offset={-100}
+                          duration={800}>
+                        {t('contact')}
+                    </Link>
                 </button>
             </div>
         </nav>

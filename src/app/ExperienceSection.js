@@ -10,12 +10,16 @@ export const ExperienceSection = () => {
             <p className={'experience-p'}>{t('experience')}</p>
             <p className={'experience-description'}>{t('experienceDescription')}</p>
             <div className={'experience-brands-grid'}>
-                <img className={'experience-brand a'}
-                     alt={'Softie'}
-                     src={`${process.env.PUBLIC_URL}/theme/images/softie.gif`}/>
-                <img className={'experience-brand b'}
-                     alt={'Akademia UXUI'}
-                     src={`${process.env.PUBLIC_URL}/theme/images/akademiaUXUI.png`}/>
+                <div className={'brand-wrapper a'}>
+                    <img className={'experience-brand'}
+                         alt={'Softie'}
+                         src={`${process.env.PUBLIC_URL}/theme/images/softie.gif`}/>
+                </div>
+                <div className={'brand-wrapper b'}>
+                    <img className={'experience-brand'}
+                         alt={'Akademia UXUI'}
+                         src={`${process.env.PUBLIC_URL}/theme/images/akademiaUXUI.png`}/>
+                </div>
             </div>
         </Element>
     );
