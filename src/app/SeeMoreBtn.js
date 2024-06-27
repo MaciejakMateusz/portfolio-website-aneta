@@ -8,7 +8,7 @@ export const SeeMoreBtn = ({url}) => {
     const [isColoredIcon, setIsColoredIcon] = useState(false);
 
     const openNewTab = () => {
-        window.open(url, '_blank');
+        window.open(`${window.location.origin}${url}`, '_blank');
     }
 
     return (
