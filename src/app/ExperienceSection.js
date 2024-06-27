@@ -1,11 +1,12 @@
 import React from "react";
 import {useTranslation} from "react-i18next";
+import {Element} from "react-scroll";
 
 export const ExperienceSection = () => {
     const {t} = useTranslation();
 
     return (
-        <section className={"experience-section"}>
+        <Element className={'experience-section'} name={'experience'}>
             <p className={'experience-p'}>{t('experience')}</p>
             <p className={'experience-description'}>{t('experienceDescription')}</p>
             <div className={'experience-brands-grid'}>
@@ -16,6 +17,6 @@ export const ExperienceSection = () => {
                      alt={'Akademia UXUI'}
                      src={`${process.env.PUBLIC_URL}/theme/images/akademiaUXUI.png`}/>
             </div>
-        </section>
+        </Element>
     );
 }

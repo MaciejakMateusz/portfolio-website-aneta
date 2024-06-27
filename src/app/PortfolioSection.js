@@ -2,6 +2,7 @@ import React from "react";
 import {PortfolioHeader} from "./PortfolioHeader";
 import {Project} from "./Project";
 import {useTranslation} from "react-i18next";
+import {Element} from "react-scroll";
 
 export const PortfolioSection = () => {
     const {t} = useTranslation();
@@ -12,7 +13,7 @@ export const PortfolioSection = () => {
                 <PortfolioHeader/>
             </section>
             <section className={'portfolio-content-section'}>
-                <div className={'portfolio-projects-grid'}>
+                <Element className={'portfolio-projects-grid'} name={'portfolio-projects'}>
                     <Project imageName={'mockup-trading.svg'}
                              name={'Trading App'}
                              subtitle={t('tradingAppSubtitle')}
@@ -33,7 +34,7 @@ export const PortfolioSection = () => {
                              subtitle={t('bloodDonationSubtitle')}
                              description={t('bloodDonationDescription')}
                              url={"/blood-donation"}/>
-                </div>
+                </Element>
             </section>
         </>
     );

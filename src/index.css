@@ -147,10 +147,10 @@ body, html {
     color: #000;
     text-align: center;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: normal;
     letter-spacing: 0.068px;
-    padding-top: 6px;
+    padding-top: 15px;
 }
 
 .portfolio-header-section {
@@ -162,6 +162,7 @@ body, html {
 }
 
 .portfolio-header {
+    cursor: pointer;
     font-family: "Quicksand", sans-serif;
     font-size: 1.5rem;
     font-style: normal;
@@ -177,7 +178,6 @@ body, html {
 }
 
 .down-anim-icon {
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
