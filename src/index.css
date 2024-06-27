@@ -1,5 +1,5 @@
 :root {
-    --Linear: linear-gradient(90deg, #2036FF 0%, #C348B0 100%);
+    --Linear: linear-gradient(90deg, #2036FF 0%, #C348B0 90%);
 }
 
 body, html {
@@ -146,10 +146,10 @@ body, html {
 .self-description {
     color: #000;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 600;
     line-height: normal;
-    letter-spacing: 0.051px;
+    letter-spacing: 0.068px;
     padding-top: 6px;
 }
 
@@ -279,7 +279,7 @@ body, html {
 }
 
 .see-more-button.active, .see-more-button:hover {
-    background: var(--Linear, linear-gradient(90deg, #2036FF 0%, #C348B0 100%));
+    background: var(--Linear, linear-gradient(90deg, #2036FF 0%, #C348B0 80%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -294,7 +294,63 @@ body, html {
     transform: translateX(15px);
 }
 
+.experience-section {
+    margin-top: 15rem;
+    width: 100%;
+    height: 39.5rem;
+    background: rgba(78, 85, 201, 0.05);
+    font-family: "Quicksand", sans-serif;
+    font-style: normal;
+    line-height: normal;
+}
+
+.experience-p {
+    padding-top: 9.6rem;
+    font-size: 2rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #2036FF 4%, #C348B0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.experience-description {
+    padding: 0 21rem 3rem;
+    text-align: center;
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.experience-brands-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10rem;
+}
+
+.experience-brand {
+    max-width: 250px;
+    height: auto;
+}
+
+.experience-brand.a {
+    grid-column: 1;
+    justify-self: flex-end;
+    object-fit: contain;
+}
+
+.experience-brand.b {
+    grid-column: 2;
+    justify-self: flex-start;
+    object-fit: contain;
+}
+
 @media (max-width: 1000px) {
+    .portfolio-projects-grid {
+        row-gap: 80px;
+    }
+
     .portfolio-project {
         grid-template-columns: 1fr;
     }

@@ -4,6 +4,7 @@ import {WelcomeSection} from "./WelcomeSection";
 import {BackgroundOrnaments} from "./BackgroundOrnaments";
 import {PortfolioSection} from "./PortfolioSection";
 import {Helmet} from "react-helmet";
+import {ExperienceSection} from "./ExperienceSection";
 
 export const Main = () => {
 
@@ -17,6 +18,7 @@ export const Main = () => {
                 <NavHeader/>
                 <WelcomeSection/>
                 <PortfolioSection/>
+                <ExperienceSection/>
             </main>
         </>
     );
