@@ -5,8 +5,9 @@ export const Project = ({imageName, name, subtitle, description, url}) => {
     return (
         <div className={'portfolio-project'}>
             <div className={'project-photo-wrapper'}>
-                <div className={'portfolio-project-photo'}
-                     style={{backgroundImage: `url(${process.env.PUBLIC_URL}/theme/images/${imageName})`}}/>
+                <img className={'portfolio-project-photo'}
+                     src={`${process.env.PUBLIC_URL}/theme/images/${imageName}`}
+                     alt={imageName}/>
             </div>
             <div className={'portfolio-project-text'}>
                 <p className={'project-name'}>{name}</p>
