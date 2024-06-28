@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useTranslation} from "react-i18next";
 import {Link} from 'react-scroll';
+import {HomeIcon} from "../icons/HomeIcon";
 
 export const NavHeader = () => {
     const {t} = useTranslation();
@@ -33,9 +34,9 @@ export const NavHeader = () => {
                       spy={true}
                       offset={0}
                       duration={800}>
-                    <img className={'nav-icon home'}
-                         src={`${process.env.PUBLIC_URL}/theme/icons/home.svg`}
-                         alt={'home'}/>
+                    <div className={'nav-icon home'}>
+                        <HomeIcon/>
+                    </div>
                     <span className={'nav-text'}>Home</span>
                 </Link>
                 <Link className={`nav-btn`}
