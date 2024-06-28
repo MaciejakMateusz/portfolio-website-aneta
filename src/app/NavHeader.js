@@ -81,6 +81,7 @@ export const NavHeader = () => {
             <div className={'nav-buttons-grid'}>
                 <Link to="home"
                       smooth={true}
+                      spy={true}
                       offset={0}
                       duration={800}
                       onSetActive={() => handleClick('home')}
@@ -99,6 +100,7 @@ export const NavHeader = () => {
                 <Link className={`nav-btn ${activeBtn === 'portfolio' ? 'active' : ''}`}
                       to="portfolio-projects"
                       smooth={true}
+                      spy={true}
                       offset={-100}
                       duration={800}
                       onSetActive={() => handleClick('portfolio')}
@@ -116,7 +118,8 @@ export const NavHeader = () => {
                 <Link className={`nav-btn ${activeBtn === 'experience' ? 'active' : ''}`}
                       to="experience"
                       smooth={true}
-                      offset={50}
+                      spy={true}
+                      offset={-50}
                       duration={800}
                       onSetActive={() => handleClick('experience')}
                       onMouseOver={() => handleMouseOver('experience')}
@@ -133,7 +136,8 @@ export const NavHeader = () => {
                 <Link className={`nav-btn ${activeBtn === 'contact' ? 'active' : ''}`}
                       to="contact"
                       smooth={true}
-                      offset={-50}
+                      spy={true}
+                      offset={-120}
                       duration={800}
                       onSetActive={() => handleClick('contact')}
                       onMouseOver={() => handleMouseOver('contact')}
