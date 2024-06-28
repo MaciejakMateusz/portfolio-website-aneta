@@ -1,11 +1,11 @@
 import React from "react";
-import {NavHeader} from "./NavHeader";
-import {WelcomeSection} from "./WelcomeSection";
-import {BackgroundOrnaments} from "./BackgroundOrnaments";
-import {PortfolioSection} from "./PortfolioSection";
+import {NavHeader} from "./navigation/NavHeader";
+import {WelcomeSection} from "./home/WelcomeSection";
+import {BackgroundOrnaments} from "./home/BackgroundOrnaments";
+import {PortfolioSection} from "./portfolio/PortfolioSection";
 import {Helmet} from "react-helmet";
-import {ExperienceSection} from "./ExperienceSection";
-import {ContactSection} from "./ContactSection";
+import {ExperienceSection} from "./experience/ExperienceSection";
+import {ContactSection} from "./contact/ContactSection";
 
 export const Main = () => {
 

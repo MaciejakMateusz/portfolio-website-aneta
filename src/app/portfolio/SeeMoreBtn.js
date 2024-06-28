@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {useTranslation} from "react-i18next";
-import {RightBlackArrowIcon} from "./icons/RightBlackArrowIcon";
-import {RightColorArrowIcon} from "./icons/RightColorArrowIcon";
+import {RightBlackArrowIcon} from "../icons/RightBlackArrowIcon";
+import {RightColorArrowIcon} from "../icons/RightColorArrowIcon";
 
 export const SeeMoreBtn = ({url}) => {
     const {t} = useTranslation();

@@ -1,5 +1,5 @@
 import React from "react";
-import {DownArrowIcon} from "./icons/DownArrowIcon";
+import {DownArrowIcon} from "../icons/DownArrowIcon";
 import {Link} from "react-scroll";
 
 export const PortfolioHeader = () => {
