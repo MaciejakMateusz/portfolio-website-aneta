@@ -72,6 +72,23 @@ nav-btn.contact {
 
 .nav-icon {
     position: absolute;
+    display: none;
+}
+
+.nav-icon.home {
+    left: -1.8rem;
+}
+
+.nav-icon.portfolio {
+    left: -1.5rem;
+}
+
+.nav-icon.experience {
+    left: -2rem;
+}
+
+.nav-icon.contact {
+    left: -1.7rem;
 }
 
 .nav-btn.active, .nav-btn:hover {
@@ -79,6 +96,9 @@ nav-btn.contact {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    .nav-icon {
+        display: block;
+    }
 }
 
 .main-background {
@@ -398,7 +418,6 @@ nav-btn.contact {
 }
 
 .contact-section {
-    padding-top: 7rem;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -489,6 +508,36 @@ footer {
 }
 
 @media (max-width: 1000px) {
+    .nav-text {
+        display: none;
+    }
+
+    .nav-icon {
+        position: relative !important;
+        display: inline-block;
+    }
+
+    .nav-icon.home {
+        left: 0;
+    }
+
+    .nav-icon.portfolio {
+        left: 0;
+    }
+
+    .nav-icon.experience {
+        left: 0;
+    }
+
+    .nav-icon.contact {
+        left: 0;
+    }
+
+    .nav-buttons-grid {
+        grid-template-columns: 3rem 3rem 3rem 3rem;
+        margin-right: 1rem;
+    }
+
     .portfolio-projects-grid {
         row-gap: 80px;
     }
@@ -522,19 +571,6 @@ footer {
 }
 
 @media (max-width: 700px) {
-    .nav-text {
-        display: none;
-    }
-
-    .nav-icon {
-        position: relative;
-    }
-
-    .nav-buttons-grid {
-        grid-template-columns: 3rem 3rem 3rem 3rem;
-        margin-right: 1rem;
-    }
-
     .contact-buttons-grid {
         grid-template-columns: 1fr;
     }
@@ -557,6 +593,24 @@ footer {
 }
 
 @media (max-width: 500px) {
+    .ellipse-ornament.a {
+        display: none;
+    }
+
+    .ellipse-ornament.b {
+        display: none;
+    }
+
+    .ellipse-ornament.c {
+        top: 441px;
+        right: -300px;
+    }
+
+    .ellipse-ornament.d {
+        top: 383px;
+        right: -300px;
+    }
+
     .welcome-p {
         font-size: 2.5rem;
     }
