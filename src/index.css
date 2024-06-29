@@ -19,12 +19,12 @@ body, html {
     max-width: 100%;
 }
 
-svg {
-    image-rendering: -webkit-crisp-edges;
-}
-
 a {
     all: unset;
+}
+
+svg {
+    image-rendering: -webkit-crisp-edges;
 }
 
 .project-svg {
