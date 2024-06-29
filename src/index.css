@@ -23,10 +23,6 @@ a {
     all: unset;
 }
 
-svg {
-    image-rendering: -webkit-crisp-edges;
-}
-
 .project-svg {
     width: 100%;
 }
@@ -656,6 +652,12 @@ footer {
 }
 
 @media (max-width: 500px) {
+    .project-svg {
+        padding: 0;
+        margin: 0;
+        max-width: 100vw;
+    }
+
     .ellipse-ornament.a {
         display: none;
     }
