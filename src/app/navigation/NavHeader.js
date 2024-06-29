@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useTranslation} from "react-i18next";
-import {Link} from 'react-scroll';
+import {Link, scroller} from 'react-scroll';
 import {ReactSVG} from "react-svg";
 
 export const NavHeader = () => {
@@ -17,6 +17,14 @@ export const NavHeader = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
+    }, []);
+
+    useEffect(() => {
+        scroller.scrollTo('home', {
+            smooth: true,
+            offset: 0,
+            duration: 800,
+        });
     }, []);
 
     const calculateOpacity = () => {
@@ -52,7 +60,7 @@ export const NavHeader = () => {
                       to="experience"
                       smooth={true}
                       spy={true}
-                      offset={-50}
+                      offset={-70}
                       duration={800}>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/experience.svg`} className={'nav-icon experience'}/>
                     <span className={'nav-text'}>{t('experience')}</span>
@@ -62,7 +70,7 @@ export const NavHeader = () => {
                       to="contact"
                       smooth={true}
                       spy={true}
-                      offset={-120}
+                      offset={-215}
                       duration={800}>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/contact.svg`} className={'nav-icon contact'}/>
                     <span className={'nav-text'}>{t('contact')}</span>
