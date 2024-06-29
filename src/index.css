@@ -37,15 +37,21 @@ svg {
 
 /* ----- LOADING SPINNER ----- */
 .spinner-container {
-    position: relative;
     width: 100%;
     height: 100%;
+    position: relative;
+}
+
+.spinner-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .spinner {
     position: absolute;
-    top: 50%;
-    left: 48%;
     transform: translate(-50%, -50%);
     height: 56px;
     width: 56px;
