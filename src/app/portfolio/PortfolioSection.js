@@ -34,6 +34,11 @@ export const PortfolioSection = () => {
                              subtitle={t('bloodDonationSubtitle')}
                              description={t('bloodDonationDescription')}
                              url={"/blood-donation"}/>
+                    <Project imageName={'mockup-ekosort.svg'}
+                             name={'Ekosort'}
+                             subtitle={t('ekosortSubtitle')}
+                             description={t('ekosortDescription')}
+                             url={"/ekosort"}/>
                 </Element>
             </section>
         </>

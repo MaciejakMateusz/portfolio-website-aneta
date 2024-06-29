@@ -622,6 +622,65 @@ footer {
     width: 100%;
 }
 
+.ekosort-grid {
+    display: grid;
+    grid-template-rows: 2.5rem 1fr;
+    height: 100%;
+}
+
+.ekosort-navigation {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nav-tab {
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-tab:hover, .nav-tab.active {
+    background-color: #F8F8F8;
+}
+
+.nav-tab.hi-fi {
+    grid-column: 1;
+}
+
+.nav-tab.hi-fi:hover, .nav-tab.hi-fi.active {
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 22px;
+}
+
+.nav-tab.research {
+    grid-column: 2;
+}
+
+.nav-tab.research:hover, .nav-tab.research.active {
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+}
+
+.nav-tab.ideate {
+    grid-column: 3;
+}
+
+.nav-tab.ideate:hover, .nav-tab.ideate.active {
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 22px;
+}
+
+.project-part {
+    grid-row: 2;
+}
+
 @media (max-width: 1000px) {
     .nav-text {
         display: none;
