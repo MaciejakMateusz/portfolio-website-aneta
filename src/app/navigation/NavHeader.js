@@ -44,9 +44,7 @@ export const NavHeader = () => {
                       spy={true}
                       offset={-100}
                       duration={800}>
-                    <img className={'nav-icon portfolio'}
-                         src={`${process.env.PUBLIC_URL}/theme/icons/portfolio.svg`}
-                         alt={'portfolio'}/>
+                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/portfolio.svg`} className={'nav-icon portfolio'}/>
                     <span className={'nav-text'}>{t('portfolio')}</span>
                 </Link>
                 <Link className={`nav-btn`}
@@ -56,9 +54,7 @@ export const NavHeader = () => {
                       spy={true}
                       offset={-50}
                       duration={800}>
-                    <img className={'nav-icon experience'}
-                         src={`${process.env.PUBLIC_URL}/theme/icons/experience.svg`}
-                         alt={'experience'}/>
+                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/experience.svg`} className={'nav-icon experience'}/>
                     <span className={'nav-text'}>{t('experience')}</span>
                 </Link>
                 <Link className={`nav-btn`}
@@ -68,9 +64,7 @@ export const NavHeader = () => {
                       spy={true}
                       offset={-120}
                       duration={800}>
-                    <img className={'nav-icon contact'}
-                         src={`${process.env.PUBLIC_URL}/theme/icons/contact.svg`}
-                         alt={'contact'}/>
+                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/contact.svg`} className={'nav-icon contact'}/>
                     <span className={'nav-text'}>{t('contact')}</span>
                 </Link>
             </div>

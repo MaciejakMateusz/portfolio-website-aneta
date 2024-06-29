@@ -1,6 +1,7 @@
 import React from "react";
 import {SeeMoreBtn} from "./SeeMoreBtn";
 import {useTranslation} from "react-i18next";
+import {ReactSVG} from "react-svg";
 
 export const Project = ({imageName, name, subtitle, description, url}) => {
     const {t} = useTranslation();
@@ -13,9 +14,8 @@ export const Project = ({imageName, name, subtitle, description, url}) => {
         <div className={'portfolio-project'}>
             <div className={'project-photo-wrapper'}>
                 <div className={'photo-container'} onClick={openProjectTab}>
-                    <img className={'portfolio-project-photo'}
-                         src={`${process.env.PUBLIC_URL}/theme/images/${imageName}`}
-                         alt={imageName}/>
+                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/images/${imageName}`}
+                              className={'portfolio-project-photo'}/>
                     <div className={'project-photo-overlay'}>{t('seeProject')}</div>
                 </div>
             </div>
