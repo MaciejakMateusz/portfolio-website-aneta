@@ -37,7 +37,6 @@ svg {
 
 /* ----- LOADING SPINNER ----- */
 .spinner-container {
-    margin-top: 2rem;
     position: relative;
     width: 100%;
     height: 100%;
@@ -45,7 +44,7 @@ svg {
 
 .spinner {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 48%;
     transform: translate(-50%, -50%);
     height: 56px;
