@@ -2,6 +2,7 @@ import React from "react";
 import {SeeMoreBtn} from "./SeeMoreBtn";
 import {useTranslation} from "react-i18next";
 import {ReactSVG} from "react-svg";
+import {LoadingSpinner} from "../icons/LoadingSpinner";
 
 export const Project = ({imageName, name, subtitle, description, url}) => {
     const {t} = useTranslation();
@@ -15,7 +16,8 @@ export const Project = ({imageName, name, subtitle, description, url}) => {
             <div className={'project-photo-wrapper'}>
                 <div className={'photo-container'} onClick={openProjectTab}>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/images/${imageName}`}
-                              className={'portfolio-project-photo'}/>
+                              className={'portfolio-project-photo'}
+                              loading={() => <LoadingSpinner/>}/>
                     <div className={'project-photo-overlay'}>{t('seeProject')}</div>
                 </div>
             </div>
