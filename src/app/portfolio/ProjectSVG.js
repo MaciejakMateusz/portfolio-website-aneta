@@ -9,9 +9,11 @@ export const ProjectSVG = ({tabTitle, svgName}) => {
             <Helmet>
                 <title>{tabTitle}</title>
             </Helmet>
-            <ReactSVG className="project-svg"
-                      src={`${process.env.PUBLIC_URL}/theme/svg-projects/${svgName}.svg`}
-                      loading={() => <LoadingSpinner/>}/>
+            <div>
+                <ReactSVG className="project-svg"
+                          src={`${process.env.PUBLIC_URL}/theme/svg-projects/${svgName}.svg`}
+                          loading={() => <LoadingSpinner/>}/>
+            </div>
         </>
 
     );
