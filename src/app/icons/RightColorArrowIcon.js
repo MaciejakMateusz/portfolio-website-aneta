@@ -10,8 +10,8 @@ export const RightColorArrowIcon = () => {
             </g>
             <defs>
                 <filter id="filter0_d_179_3793" x="-13" y="-10" width="60" height="60" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
                                    result="hardAlpha"/>
                     <feOffset dy="2"/>
@@ -23,8 +23,8 @@ export const RightColorArrowIcon = () => {
                 </filter>
                 <linearGradient id="paint0_linear_179_3793" x1="22" y1="18" x2="14.5" y2="18"
                                 gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#2036FF"/>
-                    <stop offset="1" stop-color="#C348B0"/>
+                    <stop stopColor="#2036FF"/>
+                    <stop offset="1" stopColor="#C348B0"/>
                 </linearGradient>
             </defs>
         </svg>

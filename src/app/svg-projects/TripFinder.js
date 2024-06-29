@@ -1,5 +1,6 @@
 import React from "react";
 import {Helmet} from "react-helmet";
+import {ReactSVG} from "react-svg";
 
 export const TripFinder = () => {
     return (
@@ -7,8 +8,7 @@ export const TripFinder = () => {
             <Helmet>
                 <title>Trip Finder</title>
             </Helmet>
-            <img className="project-svg" src={process.env.PUBLIC_URL + '/theme/svg-projects/trip-finder.svg'}
-                 alt={'Trip Finder'}/>
+            <ReactSVG className="project-svg" src={process.env.PUBLIC_URL + '/theme/svg-projects/trip-finder.svg'}/>
         </>
     );
 }
