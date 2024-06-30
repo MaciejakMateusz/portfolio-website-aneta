@@ -21,7 +21,6 @@ export const Main = () => {
                 <PortfolioSection/>
                 <ExperienceSection/>
                 <ContactSection/>
-                <footer>&copy; by Aneta Wolańczyk</footer>
             </main>
         </>
     );

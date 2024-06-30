@@ -112,7 +112,7 @@ svg {
 }
 
 .nav-buttons-grid {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     display: grid;
     grid-template-columns: 6.5rem 8rem 10rem 8rem;
     margin-right: 2.5rem;
@@ -166,6 +166,10 @@ svg {
 
 .nav-icon.contact {
     left: -1.7rem;
+}
+
+.nav-underline {
+    display: none;
 }
 
 .nav-btn.active, .nav-btn:hover {
@@ -318,7 +322,7 @@ svg {
 }
 
 .down-arrow {
-    width: 80%;
+    width: 60%;
 }
 
 @keyframes moveUpDown {
@@ -691,6 +695,35 @@ footer {
         display: inline-block;
     }
 
+    .nav-btn.active, .nav-btn:hover {
+        .nav-underline {
+            justify-self: center;
+            display: block;
+            position: absolute;
+            width: 9px;
+            top: 25px;
+            height: 2px;
+            background: var(--Linear, linear-gradient(90deg, #2036FF 0%, #C348B0 100%));
+            border-radius: 100px;
+        }
+
+        .nav-underline.home {
+            left: 7px;
+        }
+
+        .nav-underline.portfolio {
+            left: 3px;
+        }
+
+        .nav-underline.experience {
+            left: 7px;
+        }
+
+        .nav-underline.contact {
+            left: 8px;
+        }
+    }
+
     .nav-icon.home {
         left: 0;
     }
@@ -701,6 +734,7 @@ footer {
 
     .nav-icon.experience {
         left: 0;
+        top: 2px;
     }
 
     .nav-icon.contact {
@@ -796,10 +830,6 @@ footer {
 
     .portfolio-span {
         font-size: 1.3rem;
-    }
-
-    .down-arrow {
-        width: 60%;
     }
 
     .contact-p {

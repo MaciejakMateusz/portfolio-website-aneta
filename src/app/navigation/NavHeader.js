@@ -98,6 +98,7 @@ export const NavHeader = () => {
                       offset={determineVhBasedOffset('home')}
                       duration={800}>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/home.svg`} className={'nav-icon home'}/>
+                    <div className={'nav-underline home'}/>
                     <span className={'nav-text'}>Home</span>
                 </Link>
                 <Link className={`nav-btn`}
@@ -107,6 +108,7 @@ export const NavHeader = () => {
                       spy={true}
                       offset={determineVhBasedOffset('portfolio')}
                       duration={800}>
+                    <div className={'nav-underline portfolio'}/>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/portfolio.svg`}
                               className={'nav-icon portfolio'}/>
                     <span className={'nav-text'}>{t('portfolio')}</span>
@@ -118,6 +120,7 @@ export const NavHeader = () => {
                       spy={true}
                       offset={determineVhBasedOffset('experience')}
                       duration={800}>
+                    <div className={'nav-underline experience'}/>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/experience.svg`}
                               className={'nav-icon experience'}/>
                     <span className={'nav-text'}>{t('experience')}</span>
@@ -129,6 +132,7 @@ export const NavHeader = () => {
                       spy={true}
                       offset={determineVhBasedOffset('contact')}
                       duration={800}>
+                    <div className={'nav-underline contact'}/>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/contact.svg`} className={'nav-icon contact'}/>
                     <span className={'nav-text'}>{t('contact')}</span>
                 </Link>
