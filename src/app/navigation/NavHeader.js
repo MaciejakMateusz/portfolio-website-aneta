@@ -7,6 +7,7 @@ export const NavHeader = () => {
     const {t} = useTranslation();
     const [scrollPos, setScrollPos] = useState(0);
     const [vh, setVh] = useState(typeof Number);
+    const [vw, setVw] = useState(typeof Number);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,6 +16,7 @@ export const NavHeader = () => {
 
         const handleResize = () => {
             setVh(window.innerHeight);
+            setVw(window.innerWidth);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -63,12 +65,15 @@ export const NavHeader = () => {
                 if (vh > 500) {
                     return -70;
                 } else if (vh < 500 && vh > 350) {
-                    return 0;
+                    return 100;
                 } else if (vh < 350) {
                     return 100;
                 }
                 break;
             case 'contact':
+                if(vw < 500) {
+                    return -50
+                }
                 if (vh > 500) {
                     return -215;
                 } else if (vh < 500 && vh > 350) {
