@@ -7,7 +7,7 @@ export const ExperienceSection = () => {
     const {t} = useTranslation();
 
     return (
-        <Element className={'experience-section'} name={'experience'}>
+        <Element className={'experience-section'} name={'experience'} id={'experience'}>
             <p className={'experience-p'}>{t('experience')}</p>
             <p className={'experience-description'}>{t('experienceDescription')}</p>
             <div className={'experience-brands-grid'}>

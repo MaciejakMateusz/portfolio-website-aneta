@@ -13,7 +13,7 @@ export const PortfolioSection = () => {
                 <PortfolioHeader/>
             </section>
             <section className={'portfolio-content-section'}>
-                <Element className={'portfolio-projects-grid'} name={'portfolio-projects'}>
+                <Element className={'portfolio-projects-grid'} name={'portfolio-projects'} id={'portfolio-projects'}>
                     <Project imageName={'mockup-trading.svg'}
                              name={'Trading App'}
                              subtitle={t('tradingAppSubtitle')}

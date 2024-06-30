@@ -6,7 +6,7 @@ import {Element} from "react-scroll";
 export const ContactSection = () => {
     const {t} = useTranslation();
     return (
-        <Element name={'contact'}>
+        <Element name={'contact'} id={'contact'}>
             <section className={'contact-section'}>
                 <p className={'contact-p'}>{t('contact')}</p>
                 <p className={'contact-msg-p'}>{t('contactMsg')}</p>

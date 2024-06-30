@@ -43,17 +43,19 @@ export const EkosortProject = () => {
                 <title>Ekosort</title>
             </Helmet>
             <main className={'ekosort-grid'}>
-                <nav className={'ekosort-navigation'}>
-                    <div className={`nav-tab hi-fi ${activeTab === 'hi-fi' ? 'active' : ''}`}
-                         onClick={() => setActiveTab('hi-fi')}>HI-FI
-                    </div>
-                    <div className={`nav-tab research ${activeTab === 'research' ? 'active' : ''}`}
-                         onClick={() => setActiveTab('research')}>Research
-                    </div>
-                    <div className={`nav-tab ideate ${activeTab === 'ideate' ? 'active' : ''}`}
-                         onClick={() => setActiveTab('ideate')}>Ideate
-                    </div>
-                </nav>
+                <div className={'ekosort-navigation-container'}>
+                    <nav className={'ekosort-navigation'}>
+                        <div className={`nav-tab hi-fi ${activeTab === 'hi-fi' ? 'active' : ''}`}
+                             onClick={() => setActiveTab('hi-fi')}>HI-FI
+                        </div>
+                        <div className={`nav-tab research ${activeTab === 'research' ? 'active' : ''}`}
+                             onClick={() => setActiveTab('research')}>Research
+                        </div>
+                        <div className={`nav-tab ideate ${activeTab === 'ideate' ? 'active' : ''}`}
+                             onClick={() => setActiveTab('ideate')}>Ideate
+                        </div>
+                    </nav>
+                </div>
                 <div className={'project-part'}>
                     {renderProject()}
                 </div>

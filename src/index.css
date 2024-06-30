@@ -632,10 +632,18 @@ footer {
     height: 100%;
 }
 
-.ekosort-navigation {
+.ekosort-navigation-container {
+    width: 100%;
+    position: fixed;
     grid-row: 1;
+    height: 2.5rem;
+    background: #FFF;
+}
+
+.ekosort-navigation {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
 }
 
 .nav-tab {
@@ -651,6 +659,10 @@ footer {
 
 .nav-tab:hover, .nav-tab.active {
     background-color: #F8F8F8;
+    background: var(--Linear, linear-gradient(90deg, #2036FF 0%, #C348B0 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-tab.hi-fi {
@@ -659,7 +671,7 @@ footer {
 
 .nav-tab.hi-fi:hover, .nav-tab.hi-fi.active {
     box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
-    border-bottom-right-radius: 22px;
+    color: var(--Linear);
 }
 
 .nav-tab.research {
@@ -668,8 +680,6 @@ footer {
 
 .nav-tab.research:hover, .nav-tab.research.active {
     box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
-    border-bottom-right-radius: 22px;
-    border-bottom-left-radius: 22px;
 }
 
 .nav-tab.ideate {
@@ -678,7 +688,6 @@ footer {
 
 .nav-tab.ideate:hover, .nav-tab.ideate.active {
     box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 22px;
 }
 
 .project-part {
