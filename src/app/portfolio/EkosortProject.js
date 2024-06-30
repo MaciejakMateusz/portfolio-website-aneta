@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 import {Helmet} from "react-helmet";
-import {ReactSVG} from "react-svg";
-import {LoadingSpinner} from "../icons/LoadingSpinner";
 
 export const EkosortProject = () => {
     const [activeTab, setActiveTab] = useState('hi-fi');
@@ -11,25 +9,34 @@ export const EkosortProject = () => {
             case 'hi-fi':
                 return (
                     <div>
-                        <img className="project-svg"
-                             src={`${process.env.PUBLIC_URL}/theme/svg-projects/ekosort-hifi.png`}
+                        <Helmet>
+                            <title>Ekosort HI-FI</title>
+                        </Helmet>
+                        <img className="project-png"
+                             src={`${process.env.PUBLIC_URL}/theme/png-projects/ekosort-hifi.png`}
                              alt={'Ekosort HIFI'}/>
                     </div>
                 );
             case 'research':
                 return (
                     <div>
-                        <ReactSVG className="project-svg"
-                                  src={`${process.env.PUBLIC_URL}/theme/svg-projects/ekosort-research.svg`}
-                                  loading={() => <LoadingSpinner/>}/>
+                        <Helmet>
+                            <title>Ekosort Research</title>
+                        </Helmet>
+                        <img className="project-png"
+                             src={`${process.env.PUBLIC_URL}/theme/png-projects/ekosort-research.png`}
+                             alt={'Ekosort Research'}/>
                     </div>
                 );
             case 'ideate':
                 return (
                     <div>
-                        <ReactSVG className="project-svg"
-                                  src={`${process.env.PUBLIC_URL}/theme/svg-projects/ekosort-ideate.svg`}
-                                  loading={() => <LoadingSpinner/>}/>
+                        <Helmet>
+                            <title>Ekosort Ideate</title>
+                        </Helmet>
+                        <img className="project-png"
+                             src={`${process.env.PUBLIC_URL}/theme/png-projects/ekosort-ideate.png`}
+                             alt={'Ekosort Ideate'}/>
                     </div>
                 );
             default:
@@ -39,9 +46,6 @@ export const EkosortProject = () => {
 
     return (
         <>
-            <Helmet>
-                <title>Ekosort</title>
-            </Helmet>
             <main className={'ekosort-grid'}>
                 <div className={'ekosort-navigation-container'}>
                     <nav className={'ekosort-navigation'}>

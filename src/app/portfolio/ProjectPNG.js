@@ -10,7 +10,7 @@ export const ProjectPNG = ({tabTitle, pngName}) => {
             </Helmet>
             <div>
                 <img className="project-png"
-                     src={`${process.env.PUBLIC_URL}/theme/svg-projects/${pngName}.png`}
+                     src={`${process.env.PUBLIC_URL}/theme/png-projects/${pngName}.png`}
                      alt={pngName}/>
             </div>
         </>
