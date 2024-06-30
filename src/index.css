@@ -29,7 +29,7 @@ svg {
     max-width: 100%;
 }
 
-.project-svg {
+.project-svg, .project-png {
     width: 100%;
     max-width: 100%;
     overflow: hidden;
@@ -114,7 +114,7 @@ svg {
 .nav-buttons-grid {
     margin-bottom: 6px;
     display: grid;
-    grid-template-columns: 10rem 10rem 12rem 10rem;
+    grid-template-columns: 6.5rem 8rem 10rem 8rem;
     margin-right: 2.5rem;
 }
 

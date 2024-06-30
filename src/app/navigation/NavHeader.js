@@ -6,16 +6,23 @@ import {ReactSVG} from "react-svg";
 export const NavHeader = () => {
     const {t} = useTranslation();
     const [scrollPos, setScrollPos] = useState(0);
+    const [vh, setVh] = useState(typeof Number);
 
     useEffect(() => {
         const handleScroll = () => {
             setScrollPos(window.scrollY);
         };
 
+        const handleResize = () => {
+            setVh(window.innerHeight);
+        };
+
         window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
@@ -28,9 +35,52 @@ export const NavHeader = () => {
     }, []);
 
     const calculateOpacity = () => {
-        const maxScroll = 180;
+        const maxScroll = 160;
         return Math.min(scrollPos / maxScroll, 1);
     };
+
+    const determineVhBasedOffset = (linkName) => {
+        switch (linkName) {
+            case 'home':
+                if (vh > 500) {
+                    return 0;
+                } else if (vh < 500 && vh > 350) {
+                    return 120;
+                } else if (vh < 350) {
+                    return 120;
+                }
+                break;
+            case 'portfolio':
+                if (vh > 500) {
+                    return -100;
+                } else if (vh < 500 && vh > 350) {
+                    return 0;
+                } else if (vh < 350) {
+                    return 50;
+                }
+                break;
+            case 'experience':
+                if (vh > 500) {
+                    return -70;
+                } else if (vh < 500 && vh > 350) {
+                    return 0;
+                } else if (vh < 350) {
+                    return 100;
+                }
+                break;
+            case 'contact':
+                if (vh > 500) {
+                    return -215;
+                } else if (vh < 500 && vh > 350) {
+                    return -50;
+                } else if (vh < 350) {
+                    return -40;
+                }
+                break;
+            default:
+                return 0;
+        }
+    }
 
     return (
         <nav className="nav-header" style={{background: `rgba(255, 255, 255, ${calculateOpacity()})`}}>
@@ -40,7 +90,7 @@ export const NavHeader = () => {
                       to="home"
                       smooth={true}
                       spy={true}
-                      offset={0}
+                      offset={determineVhBasedOffset('home')}
                       duration={800}>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/home.svg`} className={'nav-icon home'}/>
                     <span className={'nav-text'}>Home</span>
@@ -50,9 +100,10 @@ export const NavHeader = () => {
                       to="portfolio-projects"
                       smooth={true}
                       spy={true}
-                      offset={-100}
+                      offset={determineVhBasedOffset('portfolio')}
                       duration={800}>
-                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/portfolio.svg`} className={'nav-icon portfolio'}/>
+                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/portfolio.svg`}
+                              className={'nav-icon portfolio'}/>
                     <span className={'nav-text'}>{t('portfolio')}</span>
                 </Link>
                 <Link className={`nav-btn`}
@@ -60,9 +111,10 @@ export const NavHeader = () => {
                       to="experience"
                       smooth={true}
                       spy={true}
-                      offset={-70}
+                      offset={determineVhBasedOffset('experience')}
                       duration={800}>
-                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/experience.svg`} className={'nav-icon experience'}/>
+                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/experience.svg`}
+                              className={'nav-icon experience'}/>
                     <span className={'nav-text'}>{t('experience')}</span>
                 </Link>
                 <Link className={`nav-btn`}
@@ -70,7 +122,7 @@ export const NavHeader = () => {
                       to="contact"
                       smooth={true}
                       spy={true}
-                      offset={-215}
+                      offset={determineVhBasedOffset('contact')}
                       duration={800}>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/contact.svg`} className={'nav-icon contact'}/>
                     <span className={'nav-text'}>{t('contact')}</span>
