@@ -55,6 +55,7 @@ export const NavHeader = ({homeRef, portfolioRef, expRef, contactRef}) => {
                 behavior: 'smooth'
             });
         }
+        document.activeElement.blur();
     };
 
     return (
