@@ -875,3 +875,9 @@ footer {
         width: 80%;
     }
 }
+
+@media (hover: none) and (pointer: coarse) {
+    .nav-underline {
+        display: none;
+    }
+}
