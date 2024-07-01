@@ -19,6 +19,7 @@ export const NavHeader = ({homeRef, portfolioRef, expRef, contactRef}) => {
     const contactVisible = useIntersectionObserver(contactRef, intersectionOptions);
 
     useEffect(() => {
+        document.activeElement.blur()
         if (homeVisible) {
             setActiveBtn('home');
         } else if (portfolioVisible) {
@@ -55,7 +56,6 @@ export const NavHeader = ({homeRef, portfolioRef, expRef, contactRef}) => {
                 behavior: 'smooth'
             });
         }
-        document.activeElement.blur();
     };
 
     return (
