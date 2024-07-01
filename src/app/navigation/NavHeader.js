@@ -19,27 +19,13 @@ export const NavHeader = ({homeRef, portfolioRef, expRef, contactRef}) => {
     const contactVisible = useIntersectionObserver(contactRef, intersectionOptions);
 
     useEffect(() => {
-        const allNavButtons = document.getElementsByClassName('nav-btn')
-
         if (homeVisible) {
-            Array.from(allNavButtons).forEach(btn => {
-                btn.classList.remove('active');
-            });
             setActiveBtn('home');
         } else if (portfolioVisible) {
-            Array.from(allNavButtons).forEach(btn => {
-                btn.classList.remove('active');
-            });
             setActiveBtn('portfolio-projects');
         } else if (expVisible) {
-            Array.from(allNavButtons).forEach(btn => {
-                btn.classList.remove('active');
-            });
             setActiveBtn('experience');
         } else if (contactVisible) {
-            Array.from(allNavButtons).forEach(btn => {
-                btn.classList.remove('active');
-            });
             setActiveBtn('contact');
         }
     }, [homeVisible, portfolioVisible, expVisible, contactVisible]);
