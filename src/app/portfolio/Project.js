@@ -22,7 +22,7 @@ export const Project = ({imageName, name, subtitle, description, url}) => {
                 </div>
             </div>
             <div className={'portfolio-project-text'}>
-                <p className={'project-name'}>{name}</p>
+                <p className={'project-name'} onClick={openProjectTab}>{name}</p>
                 <p className={'project-subtitle'}>{subtitle}</p>
                 <p className={'project-description'}>{description}</p>
                 <SeeMoreBtn url={url}/>

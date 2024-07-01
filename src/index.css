@@ -414,6 +414,10 @@ svg {
     margin-bottom: 4px;
 }
 
+.project-name:hover {
+    cursor: pointer;
+}
+
 .project-subtitle {
     color: #C348B0;
     font-size: 1.25rem;
@@ -813,22 +817,8 @@ footer {
 }
 
 @media (max-width: 500px) {
-    .ellipse-ornament.a {
+    .ellipse-ornament {
         display: none;
-    }
-
-    .ellipse-ornament.b {
-        display: none;
-    }
-
-    .ellipse-ornament.c {
-        top: 441px;
-        right: -300px;
-    }
-
-    .ellipse-ornament.d {
-        top: 383px;
-        right: -300px;
     }
 
     .welcome-p {
