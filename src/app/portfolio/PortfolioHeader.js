@@ -1,20 +1,24 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import {DownArrowIcon} from "../icons/DownArrowIcon";
-import {Link} from "react-scroll";
 
-export const PortfolioHeader = () => {
+export const PortfolioHeader = forwardRef((props, ref) => {
+
+    const handleScrollToPortfolio = (offset = 0) => {
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop + offset,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
-            <Link className={'portfolio-header'}
-                  activeClass="active"
-                  to="portfolio-projects"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={800}>
+        <div className={'portfolio-header'}
+             onClick={() => handleScrollToPortfolio(-100)}>
             <span className={'portfolio-span'}>Portfolio</span>
             <div className={'down-anim-icon'}>
                 <DownArrowIcon/>
             </div>
-        </Link>
+        </div>
     );
-}
+})

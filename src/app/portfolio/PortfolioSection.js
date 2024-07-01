@@ -1,19 +1,19 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import {PortfolioHeader} from "./PortfolioHeader";
 import {Project} from "./Project";
 import {useTranslation} from "react-i18next";
-import {Element} from "react-scroll";
+import {Element} from "react-scroll"
 
-export const PortfolioSection = () => {
+export const PortfolioSection = forwardRef((props, ref) => {
     const {t} = useTranslation();
 
     return (
         <>
             <section className={'portfolio-header-section'}>
-                <PortfolioHeader/>
+                <PortfolioHeader ref={ref}/>
             </section>
-            <section className={'portfolio-content-section'}>
-                <Element className={'portfolio-projects-grid'} name={'portfolio-projects'} id={'portfolio-projects'}>
+            <Element className={'portfolio-content-section'} name={'portfolio-projects'}>
+                <div className={'portfolio-projects-grid'} id={'portfolio-projects'} ref={ref}>
                     <Project imageName={'mockup-trading.svg'}
                              name={'Trading App'}
                              subtitle={t('tradingAppSubtitle')}
@@ -39,9 +39,8 @@ export const PortfolioSection = () => {
                              subtitle={t('ekosortSubtitle')}
                              description={t('ekosortDescription')}
                              url={"/ekosort"}/>
-                </Element>
-            </section>
+                </div>
+            </Element>
         </>
     );
-
-}
+})

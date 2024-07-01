@@ -1,39 +1,45 @@
 import React, {useEffect, useState} from 'react';
 import {useTranslation} from "react-i18next";
-import {Link, scroller} from 'react-scroll';
 import {ReactSVG} from "react-svg";
+import {useIntersectionObserver} from "../hooks/useIntersectionObserver";
 
-export const NavHeader = () => {
+export const NavHeader = ({homeRef, portfolioRef, expRef, contactRef}) => {
     const {t} = useTranslation();
     const [scrollPos, setScrollPos] = useState(0);
-    const [vh, setVh] = useState(typeof Number);
-    const [vw, setVw] = useState(typeof Number);
+    const [activeBtn, setActiveBtn] = useState('home');
+    const isWideScreen = window.innerWidth > 1000;
+    const intersectionOptions = {
+        rootMargin: isWideScreen ? '0px' : '0px',
+        threshold: isWideScreen ? 0.1 : 0.1
+    };
+
+    const homeVisible = useIntersectionObserver(homeRef, intersectionOptions);
+    const portfolioVisible = useIntersectionObserver(portfolioRef, intersectionOptions);
+    const expVisible = useIntersectionObserver(expRef, intersectionOptions);
+    const contactVisible = useIntersectionObserver(contactRef, intersectionOptions);
+
+    useEffect(() => {
+        if (homeVisible) {
+            setActiveBtn('home');
+        } else if (portfolioVisible) {
+            setActiveBtn('portfolio-projects');
+        } else if (expVisible) {
+            setActiveBtn('experience');
+        } else if (contactVisible) {
+            setActiveBtn('contact');
+        }
+    }, [homeVisible, portfolioVisible, expVisible, contactVisible]);
 
     useEffect(() => {
         const handleScroll = () => {
             setScrollPos(window.scrollY);
         };
 
-        const handleResize = () => {
-            setVh(window.innerHeight);
-            setVw(window.innerWidth);
-        };
-
         window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('resize', handleResize);
         };
-    }, []);
-
-    useEffect(() => {
-        scroller.scrollTo('home', {
-            smooth: true,
-            offset: 0,
-            duration: 800,
-        });
     }, []);
 
     const calculateOpacity = () => {
@@ -41,101 +47,45 @@ export const NavHeader = () => {
         return Math.min(scrollPos / maxScroll, 1);
     };
 
-    const determineVhBasedOffset = (linkName) => {
-        switch (linkName) {
-            case 'home':
-                if (vh > 500) {
-                    return 0;
-                } else if (vh < 500 && vh > 350) {
-                    return 120;
-                } else if (vh < 350) {
-                    return 120;
-                }
-                break;
-            case 'portfolio':
-                if (vh > 500) {
-                    return -100;
-                } else if (vh < 500 && vh > 350) {
-                    return 0;
-                } else if (vh < 350) {
-                    return 50;
-                }
-                break;
-            case 'experience':
-                if (vh > 500) {
-                    return -70;
-                } else if (vh < 500 && vh > 350) {
-                    return 100;
-                } else if (vh < 350) {
-                    return 100;
-                }
-                break;
-            case 'contact':
-                if(vw < 500) {
-                    return -50
-                }
-                if (vh > 500) {
-                    return -215;
-                } else if (vh < 500 && vh > 350) {
-                    return -50;
-                } else if (vh < 350) {
-                    return -40;
-                }
-                break;
-            default:
-                return 0;
+    const handleScrollTo = (ref, offset, btnName) => {
+        setActiveBtn(btnName);
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop + offset,
+                behavior: 'smooth'
+            });
         }
-    }
+    };
 
     return (
         <nav className="nav-header" style={{background: `rgba(255, 255, 255, ${calculateOpacity()})`}}>
             <div className={'nav-buttons-grid'}>
-                <Link className={`nav-btn`}
-                      activeClass={'active'}
-                      to="home"
-                      smooth={true}
-                      spy={true}
-                      offset={determineVhBasedOffset('home')}
-                      duration={800}>
+                <div className={`nav-btn ${activeBtn === 'home' ? 'active' : ''}`}
+                     onClick={() => handleScrollTo(homeRef, 0, 'home')}>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/home.svg`} className={'nav-icon home'}/>
                     <div className={'nav-underline home'}/>
                     <span className={'nav-text'}>Home</span>
-                </Link>
-                <Link className={`nav-btn`}
-                      activeClass={'active'}
-                      to="portfolio-projects"
-                      smooth={true}
-                      spy={true}
-                      offset={determineVhBasedOffset('portfolio')}
-                      duration={800}>
+                </div>
+                <div className={`nav-btn ${activeBtn === 'portfolio-projects' ? 'active' : ''}`}
+                     onClick={() => handleScrollTo(portfolioRef, -100, 'portfolio-projects')}>
                     <div className={'nav-underline portfolio'}/>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/portfolio.svg`}
                               className={'nav-icon portfolio'}/>
                     <span className={'nav-text'}>{t('portfolio')}</span>
-                </Link>
-                <Link className={`nav-btn`}
-                      activeClass={'active'}
-                      to="experience"
-                      smooth={true}
-                      spy={true}
-                      offset={determineVhBasedOffset('experience')}
-                      duration={800}>
+                </div>
+                <div className={`nav-btn ${activeBtn === 'experience' ? 'active' : ''}`}
+                     onClick={() => handleScrollTo(expRef, -50, 'experience')}>
                     <div className={'nav-underline experience'}/>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/experience.svg`}
                               className={'nav-icon experience'}/>
                     <span className={'nav-text'}>{t('experience')}</span>
-                </Link>
-                <Link className={`nav-btn`}
-                      activeClass={'active'}
-                      to="contact"
-                      smooth={true}
-                      spy={true}
-                      offset={determineVhBasedOffset('contact')}
-                      duration={800}>
+                </div>
+                <div className={`nav-btn ${activeBtn === 'contact' ? 'active' : ''}`}
+                     onClick={() => handleScrollTo(contactRef, -100, 'contact')}>
                     <div className={'nav-underline contact'}/>
                     <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/contact.svg`} className={'nav-icon contact'}/>
                     <span className={'nav-text'}>{t('contact')}</span>
-                </Link>
+                </div>
             </div>
         </nav>
     );
