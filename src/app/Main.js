@@ -1,5 +1,5 @@
 import React, {useRef} from "react";
-import {NavHeader} from "./navigation/NavHeader";
+import {NavMenu} from "./navigation/NavMenu";
 import {WelcomeSection} from "./home/WelcomeSection";
 import {BackgroundOrnaments} from "./home/BackgroundOrnaments";
 import {PortfolioSection} from "./portfolio/PortfolioSection";
@@ -21,7 +21,7 @@ export const Main = () => {
             </Helmet>
             <BackgroundOrnaments/>
             <main className={'main-background'}>
-                <NavHeader homeRef={homeRef} portfolioRef={portfolioRef} expRef={expRef} contactRef={contactRef}/>
+                <NavMenu homeRef={homeRef} portfolioRef={portfolioRef} expRef={expRef} contactRef={contactRef}/>
                 <WelcomeSection ref={homeRef}/>
                 <PortfolioSection ref={portfolioRef}/>
                 <ExperienceSection ref={expRef}/>

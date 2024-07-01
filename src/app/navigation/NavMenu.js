@@ -3,7 +3,7 @@ import {useTranslation} from "react-i18next";
 import {ReactSVG} from "react-svg";
 import {useIntersectionObserver} from "../hooks/useIntersectionObserver";
 
-export const NavHeader = ({homeRef, portfolioRef, expRef, contactRef}) => {
+export const NavMenu = ({homeRef, portfolioRef, expRef, contactRef}) => {
     const {t} = useTranslation();
     const [scrollPos, setScrollPos] = useState(0);
     const [activeBtn, setActiveBtn] = useState('home');
@@ -43,7 +43,7 @@ export const NavHeader = ({homeRef, portfolioRef, expRef, contactRef}) => {
     }, []);
 
     const calculateOpacity = () => {
-        const maxScroll = 160;
+        const maxScroll = 120;
         return Math.min(scrollPos / maxScroll, 1);
     };
 
