@@ -996,7 +996,7 @@ footer {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .certificate-dialog.vertical {
         max-width: 100vw;
         height: auto;
