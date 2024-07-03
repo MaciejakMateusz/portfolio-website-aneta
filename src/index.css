@@ -999,6 +999,11 @@ footer {
         width: 100vw;
         height: auto;
     }
+
+    .certificate-image {
+        width: 100vw;
+        height: auto;
+    }
 }
 
 @media (hover: none) and (pointer: coarse) {
