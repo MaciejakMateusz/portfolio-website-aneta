@@ -756,11 +756,13 @@ footer {
 }
 
 .certificate-dialog.vertical {
+    max-width: 100%;
     width: auto;
     height: 100vh;
 }
 
 .certificate-dialog.horizontal {
+    max-width: 100%;
     width: auto;
     height: 100vh;
 }
@@ -905,6 +907,7 @@ footer {
     .certificate-dialog.horizontal {
         width: 100vw;
         height: auto;
+        max-height: 100%;
     }
 
     .certificate-image.vertical {
@@ -985,11 +988,11 @@ footer {
     }
 
     .certificate-image.vertical:hover {
-        width: 7vw;
+        width: 20vw;
     }
 
     .certificate-image.horizontal:hover {
-        width: 10vw;
+        width: 29vw;
     }
 }
 
@@ -997,6 +1000,7 @@ footer {
     .certificate-dialog.vertical {
         max-width: 100vw;
         height: auto;
+        max-height: 100%;
     }
 
     .certificate-image {
