@@ -10,13 +10,10 @@ export const CertificateDialog = ({fileName, setHidden, hidden, orientation}) =>
         <div className={`dialog-overlay ${hidden ? '' : 'show'}`}
              id="dialogOverlay"
              onClick={hideDialog}>
-            <div className="dialog" onClick={hideDialog}>
-                <div className="dialog-body" onClick={hideDialog}>
-                    <img className={`certificate-dialog ${orientation}`}
-                         alt={'Certificate'}
-                         src={`${process.env.PUBLIC_URL}/theme/certificates/${fileName}`}/>
-                </div>
-            </div>
+            <img className={`certificate-dialog ${orientation}`}
+                 alt={'Certificate'}
+                 src={`${process.env.PUBLIC_URL}/theme/certificates/${fileName}`}
+                 onClick={hideDialog}/>
         </div>
     );
 }
