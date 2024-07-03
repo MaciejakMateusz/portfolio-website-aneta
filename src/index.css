@@ -475,7 +475,7 @@ svg {
     margin-top: 8rem;
     margin-bottom: 10.2rem;
     width: 100%;
-    height: 37rem;
+    height: 45rem;
     background: rgba(78, 85, 201, 0.05);
     font-family: "Quicksand", sans-serif;
     font-style: normal;
@@ -699,6 +699,120 @@ footer {
     grid-row: 2;
 }
 
+.certificates-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    justify-content: center;
+}
+
+.certificate {
+    display: flex;
+    align-items: center;
+}
+
+.certificate.a {
+    grid-column: 1;
+    justify-content: flex-end;
+}
+
+.certificate.b {
+    grid-column: 2;
+    justify-content: center;
+}
+
+.certificate.c {
+    grid-column: 3;
+    justify-content: flex-start;
+}
+
+.certificate-image {
+    height: auto;
+    cursor: pointer;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.certificate-image.vertical {
+    width: 8rem;
+}
+
+.certificate-image.horizontal {
+    width: 11rem;
+}
+
+.certificate-image.vertical:hover {
+    width: 9rem;
+}
+
+.certificate-image.horizontal:hover {
+    width: 12rem;
+}
+
+.certificate-dialog.vertical {
+    width: auto;
+    height: 100vh;
+}
+
+.certificate-dialog.horizontal {
+    width: 80vw;
+    height: auto;
+}
+
+.dialog-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9000;
+}
+
+.dialog-overlay.show {
+    display: flex;
+}
+
+.dialog {
+    position: absolute;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9001;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dialog-body {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.action-btn:hover {
+    background: #0056b3;
+}
+
 @media (max-width: 1000px) {
     .nav-text {
         display: none;
@@ -814,12 +928,40 @@ footer {
     .contact-button-frame.linkedin {
         grid-column: 1;
     }
+
+    .experience-section {
+        height: 70rem;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate.a {
+        justify-content: center;
+        grid-column: 1;
+    }
+
+    .certificate.b {
+        justify-content: center;
+        grid-column: 1;
+    }
+
+    .certificate.c {
+        justify-content: center;
+        grid-column: 1;
+    }
+
+    .certificate-image {
+        width: 11rem;
+    }
 }
 
 @media (max-width: 500px) {
     .ellipse-ornament {
         display: none;
     }
+
 
     .welcome-p {
         font-size: 2.5rem;
