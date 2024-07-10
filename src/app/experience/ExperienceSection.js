@@ -1,6 +1,5 @@
 import React, {forwardRef, useState} from "react";
 import {useTranslation} from "react-i18next";
-import {ExperienceBrand} from "./ExperienceBrand";
 import {CertificateDialog} from "../CertificateDialog";
 
 export const ExperienceSection = forwardRef((props, ref) => {
@@ -19,10 +18,6 @@ export const ExperienceSection = forwardRef((props, ref) => {
         <section className={'experience-section'} id={'experience'} ref={ref}>
             <p className={'experience-p'}>{t('experience')}</p>
             <p className={'experience-description'}>{t('experienceDescription')}</p>
-            <div className={'experience-brands-grid'}>
-                <ExperienceBrand wrapperType={'a'} imageName={'softie.gif'} alt={'Softie'}/>
-                <ExperienceBrand wrapperType={'b'} imageName={'akademiaUXUI.png'} alt={'Akademia UXUI'}/>
-            </div>
             <div className={'certificates-container'}>
                 <div className={'certificates-grid'}>
                     <div className={'certificate a'}>

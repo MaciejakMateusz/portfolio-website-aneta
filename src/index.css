@@ -707,7 +707,7 @@ footer {
 .certificates-grid {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 15% 1fr;
     width: 100%;
     justify-content: center;
     column-gap: 1rem;
@@ -744,15 +744,15 @@ footer {
 }
 
 .certificate-image.horizontal {
-    width: 11rem;
+    width: 16rem;
 }
 
 .certificate-image.vertical:hover {
-    width: 9rem;
+    width: 8.5rem;
 }
 
 .certificate-image.horizontal:hover {
-    width: 12rem;
+    width: 16.5rem;
 }
 
 .certificate-dialog.vertical {
@@ -881,6 +881,10 @@ footer {
     .experience-brands-grid {
         column-gap: 2.3rem !important;
     }
+
+    .certificates-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media (max-width: 700px) {
@@ -911,19 +915,19 @@ footer {
     }
 
     .certificate-image.vertical {
-        width: 6rem;
+        width: 15vw;
     }
 
     .certificate-image.horizontal {
-        width: 9rem;
+        width: 30vw;
     }
 
     .certificate-image.vertical:hover {
-        width: 7rem;
+        width: 15vw;
     }
 
     .certificate-image.horizontal:hover {
-        width: 10rem;
+        width: 30vw;
     }
 }
 
@@ -979,21 +983,6 @@ footer {
         width: 80%;
     }
 
-    .certificate-image.vertical {
-        width: 18vw;
-    }
-
-    .certificate-image.horizontal {
-        width: 27vw;
-    }
-
-    .certificate-image.vertical:hover {
-        width: 20vw;
-    }
-
-    .certificate-image.horizontal:hover {
-        width: 29vw;
-    }
 }
 
 @media (max-width: 450px) {
