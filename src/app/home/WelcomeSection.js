@@ -9,9 +9,6 @@ export const WelcomeSection = forwardRef((props, ref) => {
                 <img className={'background-sprinkles'}
                      src={`${process.env.PUBLIC_URL}/theme/images/background-sprinkles.png`}
                      alt={'sprinkles'}/>
-                <img className={'background-sprinkles-mobile'}
-                     src={`${process.env.PUBLIC_URL}/theme/images/background-sprinkles-mobile.png`}
-                     alt={'sprinkles'}/>
                 <p className={'name-surname-p'}>Aneta Maciejak</p>
                 <p className={'ux-ui-p'}>UXUI Designer</p>
                 <p className={'self-description'}>
