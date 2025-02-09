@@ -376,7 +376,7 @@ svg {
 }
 
 .project-subtitle {
-    color: #C348B0;
+    color: #D9767B;
     font-size: 1.25rem;
     font-weight: 500;
     margin-top: 0;
@@ -607,10 +607,7 @@ footer {
 
 .nav-tab:hover, .nav-tab.active {
     background-color: #F8F8F8;
-    background: var(--Linear, linear-gradient(90deg, #2036FF 0%, #C348B0 100%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0b74D5;
 }
 
 .nav-tab.hi-fi {
@@ -619,7 +616,6 @@ footer {
 
 .nav-tab.hi-fi:hover, .nav-tab.hi-fi.active {
     box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
-    color: var(--Linear);
 }
 
 .nav-tab.research {
