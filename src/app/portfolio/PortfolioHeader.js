@@ -15,7 +15,7 @@ export const PortfolioHeader = forwardRef((props, ref) => {
     return (
         <div className={'portfolio-header'}
              onClick={() => handleScrollToPortfolio(-100)}>
-            <span className={'portfolio-span'}>Portfolio</span>
+            <span className={'nav-btn active'}>Portfolio</span>
             <div className={'down-anim-icon'}>
                 <DownArrowIcon/>
             </div>

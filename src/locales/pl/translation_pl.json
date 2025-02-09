@@ -2,8 +2,8 @@
   "portfolio": "Portfolio",
   "experience": "Doświadczenie",
   "contact": "Kontakt",
-  "hiItsAneta": "Hej, tu Aneta",
-  "selfDescription": "Z pasją wkraczam w świat UX/UI designu. Moje dotychczasowe doświadczenia wyposażyły mnie w cenne umiejętności interpersonalne, organizacyjne i zarządzające, które teraz wykorzystuję jako aspirująca UX/UI designerka. Łączę te umiejętności z moją kreatywnością, projektując intuicyjne i estetycznie atrakcyjne interfejsy użytkownika. Obecnie angażuję się w rozwój własnej aplikacji opartej na kodach QR – projekt, który pozwala mi w pełni wykorzystać zdobytą wiedzę i umiejętności.",
+  "hello": "Cześć,",
+  "selfDescription": "Skoro już tu wylądowałeś, to znak, że chcesz rzucić okiem na moje projekty! Jestem Junior UX/UI Designerem, choć jeszcze nikt mi za to nie płaci – ale bez obaw, mam sporo energii, żeby nadrobić brak komercyjnego doświadczenia! Na co dzień bawię się pikselami, testuję mniej lub bardziej szalone pomysły i projektuję własną aplikację, gdzie króluje zasada „użyteczność + fajny design”",
   "seeMore": "Zobacz więcej",
   "seeProject": "Zobacz projekt",
   "tradingAppSubtitle": "Interaktywna giełda w Twojej kieszeni",
@@ -19,5 +19,9 @@
   "experienceDescription": "Posiadam doświadczenie zdobyte podczas ukończenia dwóch kursów w Szkole Softie oraz Akademii UXUI. Moje kompetencje w dziedzinie UXUI designu są wspierane zdobytymi certyfikatami, które potwierdzają moje zaangażowanie w rozwój zawodowy i ciągłe doskonalenie umiejętności.",
   "contactMsg": "Jeśli masz jakiekolwiek pytania dotyczące mojej pracy lub współpracy ze mną, nie wahaj się skontaktować.",
   "ekosortSubtitle": "Narzędzie do prawidłowej segregacji odpadów.",
-  "ekosortDescription": "Zespołowo opracowana aplikacja mobilna, która pomaga konsumentom zrozumieć, jak właściwie segregować śmieci. Edukuje lokalne społeczności w zakresie ekologii i angażuje ich w akcje proekologiczne. Intuicyjny interfejs sprawia, że dbanie o środowisko staje się łatwiejsze i przyjemniejsze."
+  "ekosortDescription": "Zespołowo opracowana aplikacja mobilna, która pomaga konsumentom zrozumieć, jak właściwie segregować śmieci. Edukuje lokalne społeczności w zakresie ekologii i angażuje ich w akcje proekologiczne. Intuicyjny interfejs sprawia, że dbanie o środowisko staje się łatwiejsze i przyjemniejsze.",
+  "carSpecSubtitle": "Responsywny katalog pojazdów - projekt UI",
+  "carSpecDescription": "Katalog zaprojektowany z myślą o mechanikach, inżynierach i diagnostach. Działa płynnie na wszystkich rozdzielczościach – od ultrawide, aż po urządzenia mobilne. Intuicyjne filtry i szybkie wyszukiwanie pozwalają na sprawne przetwarzanie dużych ilości danych.",
+  "hungryScanSubtitle": "Cyfrowe menu przez QR z pełną kontrolą w CMS",
+  "hungryScanDescription": "Intuicyjny system QR stworzony dla restauracji, który ułatwia klientom dostęp do interaktywnego menu, a właścicielom pełną kontrolę nad jego zarządzaniem. System łączy intuicyjną aplikację dla klientów z  panelem CMS. Umożliwia personalizację, analizę danych i automatyzację procesów."
 }

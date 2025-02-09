@@ -2,8 +2,8 @@
   "portfolio": "Portfolio",
   "experience": "Doświadczenie",
   "contact": "Contact",
-  "hiItsAneta": "Hi, it's Aneta",
-  "selfDescription": "With passion, I am stepping into the world of UX/UI design. My past experiences have equipped me with valuable interpersonal, organizational, and management skills, which I now apply as an aspiring UX/UI designer. I combine these skills with my creativity to design intuitive and aesthetically pleasing user interfaces. Currently, I am involved in developing my own application based on QR codes – a project that allows me to fully utilize the knowledge and skills I have acquired.",
+  "hello": "Hi,",
+  "selfDescription": "Since you've landed here, it means you want to take a look at my projects! I'm a Junior UX/UI Designer—though no one’s paying me for it just yet—but don’t worry, I have plenty of energy to make up for the lack of commercial experience! Every day, I play with pixels, test more or less crazy ideas, and design my own app, where the rule is „usability + cool design”",
   "seeMore": "See more",
   "seeProject": "See project",
   "tradingAppSubtitle": "Interactive stock market in your pocket",
@@ -19,5 +19,9 @@
   "experienceDescription": "I have experience gained by completing two courses at the Softie School and the UXUI Academy. My competences in the field of UXUI design are supported by acquired certificates, which confirm my commitment to professional development and continuous improvement of skills.",
   "contactMsg": "If you have any questions about my work or working with me, please do not hesitate to contact me.",
   "ekosortSubtitle": "A tool for proper waste segregation.",
-  "ekosortDescription": "A team-developed mobile application that helps consumers understand how to properly separate waste. It educates local communities about ecology and engages them in pro-ecological campaigns. The intuitive interface makes caring for the environment easier and more enjoyable."
+  "ekosortDescription": "A team-developed mobile application that helps consumers understand how to properly separate waste. It educates local communities about ecology and engages them in pro-ecological campaigns. The intuitive interface makes caring for the environment easier and more enjoyable.",
+  "carSpecSubtitle": "Responsive Vehicle Catalog - UI Design",
+  "carSpecDescription": "A catalog designed for mechanics, engineers, and diagnosticians. It runs smoothly on all resolutions – from ultrawide screens to mobile devices. Intuitive filters and fast search enable efficient processing of large amounts of data.",
+  "hungryScanSubtitle": "Digital Menu via QR with Full CMS Control",
+  "hungryScanDescription": "An intuitive QR system designed for restaurants, making it easy for customers to access an interactive menu while giving owners full control over its management. The system combines a user-friendly customer app with a CMS panel, enabling personalization, data analysis, and process automation."
 }

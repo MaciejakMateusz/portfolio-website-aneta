@@ -1,7 +1,6 @@
 import React, {useRef} from "react";
 import {NavMenu} from "./navigation/NavMenu";
 import {WelcomeSection} from "./home/WelcomeSection";
-import {BackgroundOrnaments} from "./home/BackgroundOrnaments";
 import {PortfolioSection} from "./portfolio/PortfolioSection";
 import {Helmet} from "react-helmet";
 import {ExperienceSection} from "./experience/ExperienceSection";
@@ -19,7 +18,6 @@ export const Main = () => {
             <Helmet>
                 <title>Portfolio</title>
             </Helmet>
-            <BackgroundOrnaments/>
             <main className={'main-background'}>
                 <NavMenu homeRef={homeRef} portfolioRef={portfolioRef} expRef={expRef} contactRef={contactRef}/>
                 <WelcomeSection ref={homeRef}/>

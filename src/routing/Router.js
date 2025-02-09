@@ -12,6 +12,7 @@ export const Router = () => {
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Main />}/>
+                <Route path={'/car-spec-hub'} element={<ProjectPNG tabTitle={'CarSpec Hub'} pngName={'car-spec-hub'}/>}/>
                 <Route path={'/trading-app'} element={<ProjectPNG tabTitle={'Trading App'} pngName={'trading-app'}/>}/>
                 <Route path={'/project-active'} element={<ProjectPNG tabTitle={t('projectActiveName')} pngName={'project-active'}/>}/>
                 <Route path={'/trip-finder'} element={<ProjectPNG tabTitle={'Trip Finder'} pngName={'trip-finder'}/>}/>

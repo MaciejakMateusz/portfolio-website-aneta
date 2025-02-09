@@ -14,27 +14,39 @@ export const PortfolioSection = forwardRef((props, ref) => {
             </section>
             <Element className={'portfolio-content-section'} name={'portfolio-projects'}>
                 <div className={'portfolio-projects-grid'} id={'portfolio-projects'} ref={ref}>
-                    <Project imageName={'mockup-trading.svg'}
+                    <Project imageName={'mockup-hungry-scan.png'}
+                             name={'HungryScan'}
+                             subtitle={t('hungryScanSubtitle')}
+                             description={t('hungryScanDescription')}
+                             isInteractive={false}
+                             projectLabel={'W trakcie'}/>
+                    <Project imageName={'mockup-car-spec.png'}
+                             name={'CarSpec Hub'}
+                             subtitle={t('carSpecSubtitle')}
+                             description={t('carSpecDescription')}
+                             url={"/car-spec-hub"}
+                             projectLabel={'Nowość'}/>
+                    <Project imageName={'mockup-trading.png'}
                              name={'Trading App'}
                              subtitle={t('tradingAppSubtitle')}
                              description={t('tradingAppDescription')}
                              url={"/trading-app"}/>
-                    <Project imageName={'mockup-active.svg'}
+                    <Project imageName={'mockup-active.png'}
                              name={t('projectActiveName')}
                              subtitle={t('projectActiveSubtitle')}
                              description={t('projectActiveDescription')}
                              url={"/project-active"}/>
-                    <Project imageName={'mockup-find-trip.svg'}
+                    <Project imageName={'mockup-trip-finder.png'}
                              name={'Trip Finder'}
                              subtitle={t('findTripSubtitle')}
                              description={t('findTripDescription')}
                              url={"/trip-finder"}/>
-                    <Project imageName={'mockup-blood-donations.svg'}
+                    <Project imageName={'mockup-blood-donations.png'}
                              name={t('bloodDonationName')}
                              subtitle={t('bloodDonationSubtitle')}
                              description={t('bloodDonationDescription')}
                              url={"/blood-donation"}/>
-                    <Project imageName={'mockup-ekosort.svg'}
+                    <Project imageName={'mockup-ekosort.png'}
                              name={'Ekosort'}
                              subtitle={t('ekosortSubtitle')}
                              description={t('ekosortDescription')}

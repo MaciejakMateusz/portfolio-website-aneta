@@ -6,9 +6,19 @@ export const WelcomeSection = forwardRef((props, ref) => {
     return (
         <section className={'welcome-section'} id={'home'} ref={ref}>
             <div className={'welcome-wrapper'}>
-                <p className={'welcome-p'}>{t('hiItsAneta')}</p>
-                <p className={'ux-ui-p'}>UXUI Designer <span className={'junior-span'}>Junior</span></p>
-                <p className={'self-description'}>{t('selfDescription')}</p>
+                <img className={'background-sprinkles'}
+                     src={`${process.env.PUBLIC_URL}/theme/images/background-sprinkles.png`}
+                     alt={'sprinkles'}/>
+                <img className={'background-sprinkles-mobile'}
+                     src={`${process.env.PUBLIC_URL}/theme/images/background-sprinkles-mobile.png`}
+                     alt={'sprinkles'}/>
+                <p className={'name-surname-p'}>Aneta Maciejak</p>
+                <p className={'ux-ui-p'}>UXUI Designer</p>
+                <p className={'self-description'}>
+                    <span className={'self-description hi'}>{t('hello')}</span>
+                    <br/>
+                    {t('selfDescription')}
+                </p>
             </div>
         </section>
     );

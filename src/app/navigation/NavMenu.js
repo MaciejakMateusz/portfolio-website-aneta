@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {useTranslation} from "react-i18next";
-import {ReactSVG} from "react-svg";
 import {useIntersectionObserver} from "../hooks/useIntersectionObserver";
 
 export const NavMenu = ({homeRef, portfolioRef, expRef, contactRef}) => {
     const {t} = useTranslation();
-    const [scrollPos, setScrollPos] = useState(0);
     const [activeBtn, setActiveBtn] = useState('home');
     const isWideScreen = window.innerWidth > 1000;
     const intersectionOptions = {
@@ -30,23 +28,6 @@ export const NavMenu = ({homeRef, portfolioRef, expRef, contactRef}) => {
         }
     }, [homeVisible, portfolioVisible, expVisible, contactVisible]);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollPos(window.scrollY);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    const calculateOpacity = () => {
-        const maxScroll = 120;
-        return Math.min(scrollPos / maxScroll, 1);
-    };
-
     const handleScrollTo = (ref, offset, btnName) => {
         setActiveBtn(btnName);
         if (ref.current) {
@@ -58,33 +39,25 @@ export const NavMenu = ({homeRef, portfolioRef, expRef, contactRef}) => {
     };
 
     return (
-        <nav className="nav-header" style={{background: `rgba(255, 255, 255, ${calculateOpacity()})`}}>
-            <div className={'nav-buttons-grid'}>
-                <div className={`nav-btn ${activeBtn === 'home' ? 'active' : ''}`}
-                     onClick={() => handleScrollTo(homeRef, 0, 'home')}>
-                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/home.svg`} className={'nav-icon home'}/>
-                    <div className={'nav-underline home'}/>
+        <nav className="nav-header">
+            <div className={'nav-buttons-container'}>
+                <div className={'nav-buttons-wrapper'}>
+                    <span className={`nav-btn spaced ${activeBtn === 'home' ? 'active' : ''}`}
+                          onClick={() => handleScrollTo(homeRef, 0, 'home')}>
                     <span className={'nav-text'}>Home</span>
-                </div>
-                <div className={`nav-btn ${activeBtn === 'portfolio-projects' ? 'active' : ''}`}
-                     onClick={() => handleScrollTo(portfolioRef, -100, 'portfolio-projects')}>
-                    <div className={'nav-underline portfolio'}/>
-                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/portfolio.svg`}
-                              className={'nav-icon portfolio'}/>
+                </span>
+                    <span className={`nav-btn spaced ${activeBtn === 'portfolio-projects' ? 'active' : ''}`}
+                          onClick={() => handleScrollTo(portfolioRef, -100, 'portfolio-projects')}>
                     <span className={'nav-text'}>{t('portfolio')}</span>
-                </div>
-                <div className={`nav-btn ${activeBtn === 'experience' ? 'active' : ''}`}
-                     onClick={() => handleScrollTo(expRef, -50, 'experience')}>
-                    <div className={'nav-underline experience'}/>
-                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/experience.svg`}
-                              className={'nav-icon experience'}/>
+                </span>
+                    <span className={`nav-btn spaced ${activeBtn === 'experience' ? 'active' : ''}`}
+                          onClick={() => handleScrollTo(expRef, -50, 'experience')}>
                     <span className={'nav-text'}>{t('experience')}</span>
-                </div>
-                <div className={`nav-btn ${activeBtn === 'contact' ? 'active' : ''}`}
-                     onClick={() => handleScrollTo(contactRef, -100, 'contact')}>
-                    <div className={'nav-underline contact'}/>
-                    <ReactSVG src={`${process.env.PUBLIC_URL}/theme/icons/contact.svg`} className={'nav-icon contact'}/>
+                </span>
+                    <span className={`nav-btn ${activeBtn === 'contact' ? 'active' : ''}`}
+                          onClick={() => handleScrollTo(contactRef, -100, 'contact')}>
                     <span className={'nav-text'}>{t('contact')}</span>
+                </span>
                 </div>
             </div>
         </nav>
