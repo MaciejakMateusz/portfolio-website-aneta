@@ -3,7 +3,7 @@ import {SeeMoreBtn} from "./SeeMoreBtn";
 import {useTranslation} from "react-i18next";
 import {ProjectLabel} from "./ProjectLabel";
 
-export const Project = ({imageName, name, subtitle, description, url, isInteractive = true, projectLabel}) => {
+export const Project = ({imageName, name, subtitle, description, url, isInteractive = true, projectLabel, figma}) => {
     const {t} = useTranslation();
 
     const openProjectTab = () => {
@@ -23,6 +23,15 @@ export const Project = ({imageName, name, subtitle, description, url, isInteract
             (<></>);
     }
 
+    const renderFigmaLink = () => {
+        return figma ?
+            (<span onClick={() => window.open(figma, '_blank')}
+                   className={'figma-link'}>
+                {t('figmaLink')}
+            </span>) :
+            (<></>);
+    }
+
     return (
         <div className={'portfolio-project'}>
             <div className={'project-photo-wrapper'}>
@@ -37,7 +46,7 @@ export const Project = ({imageName, name, subtitle, description, url, isInteract
             <div className={'portfolio-project-text'}>
                 <p className={`project-name ${!isInteractive ? 'no-pointer' : ''}`} onClick={openProjectTab}>{name}</p>
                 <p className={'project-subtitle'}>{subtitle}</p>
-                <p className={'project-description'}>{description}</p>
+                <p className={'project-description'}>{description} {renderFigmaLink()}</p>
                 {url && <SeeMoreBtn url={url}/>}
             </div>
         </div>

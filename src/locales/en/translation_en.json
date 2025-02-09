@@ -23,5 +23,6 @@
   "carSpecSubtitle": "Responsive Vehicle Catalog - UI Design",
   "carSpecDescription": "A catalog designed for mechanics, engineers, and diagnosticians. It runs smoothly on all resolutions – from ultrawide screens to mobile devices. Intuitive filters and fast search enable efficient processing of large amounts of data.",
   "hungryScanSubtitle": "Digital Menu via QR with Full CMS Control",
-  "hungryScanDescription": "An intuitive QR system designed for restaurants, making it easy for customers to access an interactive menu while giving owners full control over its management. The system combines a user-friendly customer app with a CMS panel, enabling personalization, data analysis, and process automation."
+  "hungryScanDescription": "An intuitive QR system designed for restaurants, making it easy for customers to access an interactive menu while giving owners full control over its management. The system combines a user-friendly customer app with a CMS panel, enabling personalization, data analysis, and process automation.",
+  "figmaLink": "Figma link"
 }
